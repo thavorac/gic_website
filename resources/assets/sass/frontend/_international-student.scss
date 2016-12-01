@@ -1,0 +1,85 @@
+/*==================================== 8. international_student ==============================*/
+.single_banner_inner{
+	position:relative;
+}
+.single_caption{
+	width:900px;
+	max-width: 90%;
+	left:15px;
+	bottom:20px;
+	position:absolute;
+	background:rgba(0,0,0,0.4);
+	padding: 15px 20px;
+	@include only-mobile {
+		padding:10px 15px;
+	}
+	@include tablet-up {
+	    padding: 15px 20px;
+	    left: 5%;
+	    bottom: 25px;
+	}
+	@include desktops {
+		width:835px;
+		left:48px;
+		bottom:30px;
+		max-width: 94%;
+		padding:20px 20px 28px;
+	}
+	@include large-desktops {
+		width:900px;
+	}
+}
+.single_caption h1{
+	font-size:26px;
+	text-transform:none;
+	color:#fff;
+	font-weight:400;
+	margin:0 0 8px;
+	@include only-mobile {
+		font-size:20px;
+	}
+	@include tablet-up {
+		font-size:30px;
+	}
+	@include desktops {
+		font-size:40px;
+	}
+	@include large-desktops {
+		font-size:44px;
+	}
+}
+.single_caption h2{
+	font-size:16px;
+	text-transform:none;
+	color:#fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	margin:0;
+	@include only-mobile {
+		font-size:13px;
+	}
+	@include desktops {
+		font-size:16px;
+	}
+	@include large-desktops {
+		font-size:22px;
+	}
+}
+.single_content{
+	padding:35px 0 ;
+}
+.custom {
+	padding-bottom: 60px;
+	h2 {
+	    font-size: 22px;
+	    text-transform: uppercase;
+	    line-height: 27px;
+	    margin: 0 0 14px;
+	}
+}
+.course-title h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 27px;
+    margin: 0 0 14px;
+}

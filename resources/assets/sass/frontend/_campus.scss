@@ -1,0 +1,33 @@
+/*============================ 11. campus =======================================*/
+.custom_content.custom h3{
+	text-transform:uppercase;
+	margin:0 0 30px;
+}
+.carousel-indicators{
+	z-index:999;
+	margin-bottom:0;
+}
+.carousel-indicators li{
+	width:10px;
+	height:10px;
+	margin:0 5px;
+	background:#fff;
+}
+.carousel-indicators li.active{
+	background:$primary-color;
+	width:10px;
+	height:10px;
+	border:none;
+}
+.row.custom {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.sidebar_item.campus h4{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	margin:10px 0 15px;
+	width:100%;
+	float:left;
+	line-height:normal;
+}

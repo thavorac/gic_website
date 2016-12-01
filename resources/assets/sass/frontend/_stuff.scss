@@ -1,0 +1,75 @@
+/*============================= 10. Stuff =============================================*/
+.custom_content{
+	padding:35px 0 35px;
+	background:#fff;
+}
+.custom_title h1{
+	margin:0 0 15px;
+}
+ul.list{
+	border-bottom:1px solid #dce4ea;
+	margin:30px 0 50px;
+	float: left;
+	clear: both;
+	li{
+		margin: 0 4% 45px 0;
+	    text-align: center;
+	    width: 48%;
+		float:left;
+		display: inline-block;
+		@include only-mobile {
+			margin: 0 0 30px;
+		    text-align: center;
+		    width: 100%;
+		    float: none;
+		}
+		@include tablet-up {
+			width: 23%;
+    		margin: 0 2% 45px 0;
+		}
+		@include desktops {
+			width: 220px;
+    		margin: 0 20px 45px 0;
+		}
+		@include large-desktops {
+			width:237px;
+			margin:0 63px 60px 0px;
+		} 
+		.thumb{
+			width: 100%;
+			margin:0 0 22px;
+		}
+		a{
+			text-decoration:none;
+		}
+	}
+	li:nth-child(2n){
+		@include phone {
+			margin-right:0;
+			clear: right;
+		}
+	}
+	@include desktops {
+		li:nth-child(4n){
+			margin-right:0;
+			clear: right;
+		}
+	}
+}
+ul.list.last{
+	border:none;
+	margin-bottom:0;
+}
+ul.list h3{
+	font-weight:400;
+	color:#000;
+	font-size:20px;
+	margin:0 0 2px;
+}
+ul.list h5{
+	font-family: 'Roboto Slab', serif;
+	font-weight:400;
+	color:#000;
+	font-size:14px;
+	line-height:normal;
+}

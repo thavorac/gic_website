@@ -1,0 +1,59 @@
+/*================= 18. PRICE TABLE ==================*/
+.price-table .col-xs-6{
+	@include only-mobile {
+		width: 100%;
+	}
+}
+.price-table-inner{
+	text-align: center;
+	padding:30px;
+	margin-bottom: 70px;
+	border: 1px solid #dce4ea;
+	@include only-mobile {
+		padding:0;
+		border: none;
+	}
+	@include tablet-up {
+		padding:15px;
+	}
+	@include desktops {
+		padding:30px;
+	}
+	.btn{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+.price-table h3{
+	font-size: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.price-table span{
+	font-size: 15px;
+	margin-bottom: 10px;
+	font-weight: 400;
+	display: block;
+}
+.price-title{
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+	background: $primary-color;
+	margin-bottom: 25px;
+}
+.course-price {
+	h2{
+		font-size: 35px;
+		line-height: 35px;
+		margin-bottom: 0;
+		font-weight: 300;
+		margin: 25px 0 5px;
+	}
+	span{
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+}
+

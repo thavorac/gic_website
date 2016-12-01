@@ -1,0 +1,131 @@
+/*==================================== 7. admission ==============================*/
+.single_banner_inner.admission .single_caption{
+	left:22px;
+	width:700px;
+}
+.single_banner_inner.admission .single_caption h1{
+	margin:0;
+}
+.block_quate{
+	padding:10px 20px;
+	border-left:4px solid $second-bg-color;
+	background:#f6f9fa;
+	margin:40px 0 25px;
+	p{
+		font-weight:400;
+		font-style:italic;
+		margin:0!important;
+	}
+}
+.block_quate.custom{
+	margin-top: 0;
+}
+.admission_video{
+	margin:20px 0 38px;
+	cursor:pointer;
+	text-align: center;
+}
+.admission_video iframe{
+	max-width:100%;
+}
+.admission-border{
+	padding-bottom: 60px;
+	border-bottom: 1px solid #dce4ea;
+	margin-bottom: 25px;
+}
+.resultPart.admission{
+    padding-right: 20px;
+}
+.sidebar{
+	@include phone {
+		margin: 30px 0 0;
+	}
+}
+.sidebar_item{
+	border-top:3px solid $second-bg-color;
+	margin:0 0 20px;
+}
+.item_inner{
+	border-top:none!important;
+	border:1px solid #dce4ea;
+	padding:15px 5px 20px 15px;
+}
+.item_inner.program{
+	background:#f6f9fa;
+}
+.item_inner a.fees{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size:14px;
+	color:$primary-color;
+	text-decoration:none;
+}
+.item_inner > h4{
+	margin:0 0 16px;
+	text-transform:uppercase;
+}
+.item_inner.program ul{
+	width:100%;
+	li{
+		display: block;
+		width:100%;
+		font-weight:600;
+		font-size:14px;
+		color:#000;
+		text-align:left;
+		line-height:18px;
+		margin:0 0 16px;
+		span{
+			width:40%;
+			display:inline-block;
+			color:#686868;
+		}
+	}
+	li:last-child{
+		margin:0;
+	}
+}
+.sidebar_item.admission .item_inner.program{
+	padding:0 20px;
+}
+.sidebar_item.admission .item_inner.program ul li a{
+	color:$primary-color;
+	text-transform:uppercase;
+	font-weight:700;
+	border-bottom:1px solid #dce4ea;
+	display:block;
+	text-decoration:none;
+	padding-bottom:17px;
+	background:url(../img/admission/arrow.png) no-repeat right center;
+	padding-right:20px;
+	padding-top:17px;
+	@include transition(all 0.2s ease-in-out);
+}
+.sidebar_item.admission .item_inner.program ul li a:hover{
+	color:#000;
+}
+.sidebar_item.admission .item_inner.program ul li{
+	margin:0 0 0;
+}
+.sidebar_item.admission .item_inner.program ul li.active a{
+	color:#000;
+}
+.sidebar_item.admission .item_inner.program ul li:last-child{
+	margin:0;
+}
+.sidebar_item.admission .item_inner.program ul li:last-child a{
+	border:none;
+	margin:0;
+}
+.sidebar_item.admission .item_inner.program ul li.no_arrow a{
+	background:none;
+}
+.formArea.admission{
+	padding:0;
+	border:none;
+	margin:0;
+}
+.formArea.admission h3{
+	text-transform:uppercase;
+	margin:0 0 20px;
+}

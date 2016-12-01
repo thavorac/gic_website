@@ -1,0 +1,48 @@
+@mixin only-mobile{
+	@media(max-width:479px){
+		@content;
+	}
+}
+@mixin phone{
+	@media(max-width:767px){
+		@content;
+	}
+}
+@mixin tablet-up{
+	@media(min-width:768px){
+		@content;
+	}
+}
+@mixin desktops{
+	@media(min-width:992px){
+		@content;
+	}
+}
+@mixin large-desktops{
+	@media(min-width:1200px){
+		@content;
+	}
+}
+
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+  -webkit-box-shadow: $horizontal $vertical $blur $color;
+  -moz-box-shadow: $horizontal $vertical $blur $color;
+  box-shadow: $horizontal $vertical $blur $color;
+}
+@mixin border-radius($radius: 5px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

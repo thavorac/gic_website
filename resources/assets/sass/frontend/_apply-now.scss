@@ -1,0 +1,176 @@
+/*================================== 13. Apply now ====================================*/
+.apply_from .form-group .label{
+	font-family:"Open Sans",sans-serif;
+	font-size:14px;
+	color:#000;
+	font-weight:400;
+	padding:0;
+	line-height:normal;
+	white-space:normal;
+	padding:10px 0;
+	float:left;
+	text-align:left;
+}
+.apply_from .form-group .form-control{
+	box-shadow:none;
+}
+.apply_from .form-group .label span{
+	color:#f00;
+}
+.apply_from h4{
+	text-transform:uppercase;
+	margin:30px 0 20px;
+}
+.apply_from .form-group textarea{
+	height:120px;
+	resize:vertical;
+}
+.text-field{
+	width:100%;
+	float:left;
+	height:auto;
+}
+.text-field.custom{
+	display:table;
+}
+.field-prefix{
+	display:table-cell;
+}
+.text-field.custom .form-control{
+	display:inline-block;
+}
+.card-type{
+	width:100%;
+	float:left;
+}
+.card-type li{
+	display:inline-block;
+	position:relative;
+	margin:0 15px 0 0;
+}
+input[type="radio"] {
+		display:none;
+}
+input[type="radio"] + label {
+	font-family:"Open Sans",sans-serif;
+	font-size:14px;
+	color:#000;
+}
+input[type="radio"] + label span {
+	display:inline-block;
+	width:40px;
+	height:25px;
+	margin:-1px 4px 0 0;
+	vertical-align:middle;
+	cursor:pointer;
+	opacity:0.5;
+}
+input[type="radio"]:checked + label span{
+	 opacity:1;
+}
+.apply_from .commonBtn{
+	width:200px;
+	border:none;
+}
+@include phone {
+	.col-xs-12.col-sm-4.select-year {
+	    margin-top: 15px;
+	}
+	.apply_from .custom_margin {
+	    margin: 15px 0 0;
+	}
+}
+
+/*================= 13. BOOKING CONFIRMATION ==================*/
+.ed-alert.alert-success {
+	font-size: 20px;
+	font-weight: 300;
+    color: #5ca05e;
+    background-color: #edfaee;
+    border-color: #d0edce;
+    padding: 15px 35px;
+    margin-bottom: 30px;
+    .close{
+    		filter: alpha(opacity=100);
+		    opacity: 1;
+	    &:focus, &:hover {
+		    color: #5ca05e;
+		    filter: alpha(opacity=100);
+		    opacity: 1;
+		}
+	}
+	i{
+		font-size: 25px;
+		padding-top: 9px;
+		width: 45px;
+		height: 45px;
+		text-align: center;
+		background: #60a662;
+		color: #ffffff;
+		display: inline-block;
+		@include border-radius(50%);
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.icomoon-checkmark3:before {
+		vertical-align: middle;
+	}
+}
+.ed-alert.alert-dismissable .close, .ed-alert.alert-dismissible .close {
+    position: relative;
+    top: -14px;
+    right: -28px;
+}
+.ed-cinfirm{
+	width: 100%;
+}
+.ed-cinfirm .top-headline{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: rgba(0, 0, 0, 0.8);
+	@include tablet-up {
+		margin-top: 0;
+	}
+}
+.ed-cinfirm-detail{
+	.headline{
+		margin-top: 30px;
+		color: rgba(0, 0, 0, 0.8);
+		margin-bottom: 20px;
+	}
+	li{
+		width: 43%;
+		display: inline-block;
+		float: left;
+		margin: 0 10px;
+		margin-bottom: 30px;
+		@include desktops {
+			width: 25%;
+			margin: 0;
+			margin-bottom: 30px;
+		}
+		span{
+			font-size: 16px;
+			font-weight: 300;
+		}
+		span:first-child{
+			font-weight: 500 !important;
+		}
+	}
+	li:last-child{
+		float: right;
+		span{
+			font-size: 26px;
+			font-weight: 300;
+		}
+		span:first-child{
+			font-weight: 500 !important;
+		}
+	}
+}
+.ed-cinfirm-detail ul{
+	margin: 0 -10px;
+	@include desktops {
+		margin: 0 ;
+	}
+}

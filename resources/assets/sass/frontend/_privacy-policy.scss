@@ -1,0 +1,28 @@
+/*================================== 14. Privacy policy ====================================*/
+.privacy_content h4{
+	font-weight:400;
+	line-height:28px;
+	margin:0 0 20px;
+}
+.privacy_content p a{
+	text-decoration:underline;
+}
+.privacy_content p a:hover{
+	text-decoration:none;
+}
+.privacy_content h5{
+	margin:35px 0 8px;
+	line-height:normal;
+}
+.privacy_content ul{
+	margin:0 0px 20px 22px;
+}
+.privacy_content ul li{
+	padding-left:15px;
+	background:url(../img/bullet.png) no-repeat left 10px;
+	line-height:23px;
+	margin:0 0 5px;
+}
+p > a,p > a:hover{
+	font-weight: 400;
+}

@@ -1,0 +1,54 @@
+/*================================= 15. Contact Us ====================================*/
+.contact_form label{
+	font-weight:normal;
+}
+.contact_form label .error{
+	color:#f00;
+}
+.contact_form .form-control{
+	box-shadow:none;
+}
+.contact_form .commonBtn{
+	border:none;
+	padding:0 40px;
+}
+ul.contact_info li{
+	width:100%;
+	display: block;
+	font-weight:400;
+	color:#000;
+	margin:0 0 5px;
+}
+ul.contact_info li .fa {
+    color: $primary-color;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 5px;
+    width: 20px;
+}
+ul.contact_info li a{
+	color:#000;
+	font-weight:400!important;
+}
+ul.contact_info li a:hover{
+	color:$primary-color;
+}
+.list_block.custom{
+	padding: 15px 12px 25px;
+}
+.list_block.custom p{
+	margin:0;
+}
+.list_block.custom h4{
+	font-weight:400;
+	font-family:"Open Sans",sans-serif;
+	margin:10px 0 20px;
+	float:left;
+	width:100%;
+}
+.single_banner_inner img{
+	width:100%;
+}
+.contact_map iframe{
+	display: block;
+}
