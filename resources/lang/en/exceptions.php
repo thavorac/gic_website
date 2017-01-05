@@ -41,6 +41,13 @@ return [
                 'update_password_error' => 'There was a problem changing this users password. Please try again.',
             ],
         ],
+        'general' => [
+            'not_found' => "Record not found.",
+            'already_exists' => "Record is already exist.",
+            'create_error' => "Record registration is not possible. Something went wrong!",
+            "update_error" => "Record can not be updated. Something went wrong!",
+            "delete_error" => "Record can not be deleted."
+        ]
     ],
 
     'frontend' => [

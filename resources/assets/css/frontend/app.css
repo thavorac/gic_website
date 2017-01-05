@@ -895,7 +895,7 @@ body.bodyColor.container {
 
 /*=== 1.5 mainContent ===*/
 .mainContent {
-  padding: 47px 0 65px 0;
+  padding: 0 0 65px 0;
   background-color: #fff;
   float: left; }
   @media (max-width: 767px) {

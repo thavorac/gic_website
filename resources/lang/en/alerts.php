@@ -30,4 +30,9 @@ return [
             'updated_password' => "The user's password was successfully updated.",
         ]
     ],
+    'generals' => [
+        'created' => "Record is successfully created!",
+        'updated' => "Record is successfully updated!",
+        'deleted' => "Record is successfully deleted!"
+    ]
 ];

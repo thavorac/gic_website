@@ -40,28 +40,27 @@
             <div class="topbar clearfix">
                 <div class="container">
                     <ul class="topbar-left">
-                        <li class="phoneNo"><i class="fa fa-phone"></i>0123 45678910</li>
+                        <li class="phoneNo"><i class="fa fa-phone"></i>{{$department->phone}}</li>
                         <li class="email-id hidden-xs hidden-sm"><i class="fa fa-envelope"></i>
-                            <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+                            <a href="mailto:{{$department->email}}">{{$department->email}}</a>
                         </li>
                     </ul>
                     <ul class="topbar-right">
-                        <li class="hidden-xs"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li class="hidden-xs"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="hidden-xs"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="hidden-xs"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                        <li class="hidden-xs"><a href="#"><i class="fa fa-rss"></i></a></li>
-                        <li class="dropdown top-search list-inline">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-search"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <form action="courses.html" method="post">
-                                    <input type="text" placeholder="Course Name" id="exampleInputEmail1" class="form-control">
-                                    <button class="btn btn-default commonBtn" type="submit">Search</button>
-                                </form>
-                            </ul>
-                        </li>
+                        <li class="hidden-xs"><a href="{{$department->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                        <li class="hidden-xs"><a href="{{$department->facebook}}"><i class="fa fa-facebook"></i></a></li>
+                        <li class="hidden-xs"><a href="{{$department->gplus}}"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="hidden-xs"><a href="{{$department->youtube}}"><i class="fa fa-youtube-play"></i></a></li>
+                        {{--<li class="dropdown top-search list-inline">--}}
+                            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">--}}
+                                {{--<i class="fa fa-search"></i>--}}
+                            {{--</a>--}}
+                            {{--<ul class="dropdown-menu">--}}
+                                {{--<form action="courses.html" method="post">--}}
+                                    {{--<input type="text" placeholder="Course Name" id="exampleInputEmail1" class="form-control">--}}
+                                    {{--<button class="btn btn-default commonBtn" type="submit">Search</button>--}}
+                                {{--</form>--}}
+                            {{--</ul>--}}
+                        {{--</li>--}}
                         <li class="dropdown language">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-globe"></i>EN
@@ -71,9 +70,8 @@
                                 <li class="active">
                                     <a href="#">English </a>
                                 </li>
-                                <li><a href="#">Spanish</a></li>
-                                <li><a href="#">Russian</a></li>
-                                <li><a href="#">German</a></li>
+                                <li><a href="#">Khmer</a></li>
+                                <li><a href="#">French</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -81,7 +79,7 @@
             </div>
 
             <div class="header clearfix">
-                <nav class="navbar navbar-main navbar-default">
+                <nav class="navbar navbar-main navbar-default" style="margin-bottom: 0px !important;">
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
@@ -94,103 +92,58 @@
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                         </button>
-                                        <a class="navbar-brand logo clearfix" href="index.html"><img src="img/frontend/logo.png" alt="" class="img-responsive" /></a>
+                                        <a class="navbar-brand logo clearfix" href="index.html"><img src="/img/files/{{$department->logo}}" alt="" class="img-responsive" style="height: 43px !important; width: auto !important;" /></a>
                                     </div>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="main-nav">
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="active"><a href="index.html">Home</a></li>
                                             <li class="dropdown list-inline">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses Grid View</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="course-grid-3col.html">3 Columns</a></li>
-                                                            <li><a href="course-grid-4col.html">4 Columns</a></li>
-                                                            <li><a href="course-grid-sidebar-right.html">Sidebar Right</a></li>
-                                                            <li><a href="course-grid-sidebar-left.html">Sidebar Left</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses List View</a>
-                                                        <ul  class="dropdown-menu">
-                                                            <li><a href="course-right-sidebar.html">Sidebar Right</a></li>
-                                                            <li><a href="course-left-sidebar.html">Sidebar Left</a></li>
-                                                            <li><a href="course-fullwidth.html">Fullwidth</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Single Course</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="single-course-right-sidebar.html">Sidebar Right</a></li>
-                                                            <li><a href="single-course-left-sidebar.html">Sidebar Left</a></li>
-                                                            <li><a href="single-course-fullwidth.html">Fullwidth</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buy Course</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="buying-steps.html">Payment</a></li>
-                                                            <li><a href="buying-confirmation.html">Confirmation </a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES</a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academic</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="about.html">About College</a></li>
+                                                    <li><a href="about.html">Courses</a></li>
                                                     <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Photo Gallery</a>
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Timetables</a>
                                                         <ul class="dropdown-menu">
-                                                            <li><a href="photo-gallery3col.html">Gallery 3 Columns</a></li>
-                                                            <li><a href="photo-gallery4col.html">Gallery 4 Columns</a></li>
+                                                            <li><a href="buying-steps.html">2016-2017</a></li>
+                                                            <li><a href="buying-confirmation.html">2015-2016</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply Now</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="buying-steps.html">Apply For Addmission</a></li>
-                                                            <li><a href="buying-confirmation.html">Confirmation</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prices Table</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="price-table-3col.html">Prices 3 column</a></li>
-                                                            <li><a href="price-table-4col.html">Prices 4 column</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="campus.html">Our Campus</a></li>
-                                                    <li><a href="stuff.html">Stuff</a></li>
-                                                    <li><a href="international_students.html">International Students</a></li>
-                                                    <li><a href="contact-us.html">Contact Us</a></li>
-                                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                                    <li><a href="404-error.html">404 Not Found</a></li>
-                                                    <li><a href="coming-soon-dark.html" target="_blank">Coming Soon</a></li>
+                                                    <li><a href="about.html">Students</a></li>
+                                                    <li><a href="about.html">Scholarships</a></li>
+                                                    <li><a href="about.html">Scholarship Winners</a></li>
+                                                    <li><a href="about.html">Programs</a></li>
+                                                    <li><a href="about.html">Missions</a></li>
+
                                                 </ul>
                                             </li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BLOG</a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research/Development</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="blog-right-sidebar.html">Blog Sidebar Right</a></li>
-                                                    <li><a href="blog-left-sidebar.html">Blog Sidebar Left</a></li>
-                                                    <li><a href="single-post-right-sidebar.html">Single Post Sidebar Right</a></li>
-                                                    <li><a href="single-post-left-sidebar.html">Single Post Sidebar Left</a></li>
+                                                    <li><a href="coming-soon-dark.html" target="_blank">Projects</a></li>
+                                                    <li><a href="coming-soon-dark.html" target="_blank">Partners</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">News/Events</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="events-3col.html">News</a></li>
+                                                    <li><a href="events-right-sidebar.html">Events</a></li>
+                                                    <li><a href="events-left-sidebar.html">Student's Message</a></li>
+                                                    <li><a href="single-events.html">Blog</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staffs & Other</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="events-3col.html">Events 3 Columns</a></li>
-                                                    <li><a href="events-right-sidebar.html">Events Sidebar Right</a></li>
-                                                    <li><a href="events-left-sidebar.html">Events Sidebar Left</a></li>
-                                                    <li><a href="single-events.html">Single Event</a></li>
-                                                    <li><a href="events-calendar.html">Events Callender</a></li>
+                                                    <li><a href="events-3col.html">Staffs</a></li>
+                                                    <li><a href="events-right-sidebar.html">Useful Links</a></li>
+                                                    <li><a href="events-left-sidebar.html">Gallery</a></li>
+                                                    <li><a href="single-events.html">Our Rooms/Labs</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="apply_now"><a href="buying-steps.html">Apply Now</a></li>
                                         </ul>
                                     </div><!-- navbar-collapse -->
                                 </div>
@@ -209,10 +162,10 @@
 
                         <div class="col-sm-3 col-xs-6">
                             <ul class="menuLink clearfix">
-                                <li><a href="about.html">About Royal College</a></li>
+                                <li><a href="about.html">About {{strtoupper($department->code)}}</a></li>
                                 <li><a href="campus.html">About Campus</a></li>
                                 <li><a href="stuff.html">Staff Members</a></li>
-                                <li><a href="about.html">Why Choose Us?</a></li>
+                                <li><a href="about.html">OUR MISSION</a></li>
                             </ul>
                         </div><!-- col-sm-3 col-xs-6 -->
 
@@ -229,9 +182,7 @@
                             <div class="footer-address">
                                 <h5>Location:</h5>
                                 <address>
-                                    Royal College<br>
-                                    1727 Lombard St.<br>
-                                    San Francisco
+                                    {{$department->address}}
                                 </address>
                                 <a href="contact-us.html"><span class="place"><i class="fa fa-map-marker"></i>Main Campus</span></a>
                             </div>
@@ -251,7 +202,7 @@
                             </div><!-- social -->
                             <div class="contactNo clearfix">
                                 <h5>Call us on:</h5>
-                                <h3>012-3434-456768</h3>
+                                <h3>{{$department->phone}}</h3>
                             </div><!-- contactNo -->
                         </div><!-- col-sm-3 col-xs-6 -->
 

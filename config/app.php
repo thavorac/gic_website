@@ -133,6 +133,7 @@ return [
     'log' => env('APP_LOG', 'daily'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    'records_per_page' => 25,
 
     /*
     |--------------------------------------------------------------------------

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Department;
 
 /**
  * Class FrontendController
@@ -15,11 +16,8 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        javascript()->put([
-            'test' => 'it works!',
-        ]);
-
-        return view('frontend.index');
+        $department = Department::where('code','GIC')->first();
+        return view('frontend.index',compact('department'));
     }
 
     /**
