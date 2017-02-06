@@ -16,6 +16,8 @@ class Event extends Model {
 	 */
 	protected $table = 'events';
 
+    protected  $dates = ['start','end'];
+
 	/**
 	 * The attributes that are mass assignable.
 	 *
@@ -23,8 +25,10 @@ class Event extends Model {
 	 */
 	protected $fillable = [
         'name',
-        'start',
-        'end',
+        'date_start',
+        'date_end',
+        'time_start',
+        'time_end',
         'require_register',
         'pending',
         'file',
@@ -32,7 +36,8 @@ class Event extends Model {
         'write_uid',
         'created_at',
         'updated_at',
-        'about'
+        'about',
+        'location'
     ];
 
     public function creator(){

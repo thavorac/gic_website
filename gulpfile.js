@@ -22,6 +22,30 @@ elixir(function(mix) {
        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
        'public/js/vendor/bootstrap'
      )
+     //.copy(
+     //    'bower_components/bootstrap-fileinput/css/fileinput.min.css',
+     //    'public/css/backend/plugin/bootstrap-fileinput/fileinput.min.css'
+     //)
+     //.copy(
+     //    'bower_components/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js',
+     //    'public/css/backend/plugin/bootstrap-fileinput/plugins/canvas-to-blob.min.js'
+     //)
+     //.copy(
+     //    'bower_components/bootstrap-fileinput/js/plugins/sortable.min.js',
+     //    'public/css/backend/plugin/bootstrap-fileinput/plugins/sortable.min.js'
+     //)
+     //.copy(
+     //    'bower_components/bootstrap-fileinput/js/plugins/purify.min.js',
+     //    'public/css/backend/plugin/bootstrap-fileinput/plugins/purify.min.js'
+     //)
+     //.copy(
+     //    'bower_components/bootstrap-fileinput/js/fileinput.min.js',
+     //    'public/css/backend/plugin/bootstrap-fileinput/fileinput.min.js'
+     //)
+     //.copy(
+     //    'bower_components/bootstrap-fileinput/themes/fa/theme.js',
+     //    'public/css/backend/plugin/bootstrap-fileinput/themes/fa/theme.js'
+     //)
 
      /**
       * Process frontend SCSS stylesheets

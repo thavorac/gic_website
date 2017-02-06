@@ -30,11 +30,9 @@
                 <table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%" id="data-table">
                     <thead>
                     <tr>
-                        <th>{{ trans('labels.general.id') }}</th>
                         <th>{{ trans('labels.backend.program.fields.name') }}</th>
-                        <th>{{ trans('labels.backend.program.fields.about') }}</th>
-                        <th>{{ trans('labels.backend.program.fields.syllabus') }}</th>
                         <th>{{ trans('labels.backend.program.fields.description') }}</th>
+                        <th>{{ trans('labels.backend.program.fields.syllabus') }}</th>
                         <th>{{ trans('labels.general.actions') }}</th>
                     </tr>
                     </thead>
@@ -61,11 +59,9 @@
                     method: 'POST'
                 },
                 columns: [
-                    { data: 'id', name: 'id'},
                     { data: 'name', name: 'name'},
-                    { data: 'about', name: 'about',orderable: false, searchable: false},
-                    { data: 'syllabus', name: 'syllabus',orderable: false, searchable: false},
                     { data: 'description', name: 'description',orderable: false, searchable: false},
+                    { data: 'syllabus', name: 'syllabus',orderable: false, searchable: false},
                     { data: 'action', name: 'action',orderable: false, searchable: false}
                 ]
             });

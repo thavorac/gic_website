@@ -3,6 +3,11 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Backend\Slideshow\DeleteSlideshowRequest;
+use App\Http\Requests\Backend\Slideshow\StoreSlideshowRequest;
+use App\Http\Requests\Backend\Slideshow\UpdateSlideshowRequest;
+use App\Repositories\Backend\Slideshow\SlideshowRepositoryContract;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
 
 /**
@@ -11,6 +16,15 @@ use Illuminate\Support\Facades\Request;
  */
 class SlideShowController extends Controller
 {
+
+    protected $slideshows;
+
+    public function __construct(
+        SlideshowRepositoryContract $slideshowRepo
+    )
+    {
+        $this->slideshows = $slideshowRepo;
+    }
 
     public function index()
     {
@@ -23,9 +37,9 @@ class SlideShowController extends Controller
         return view('backend.slideshow.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreSlideshowRequest $request)
     {
-
+        $this->slideshows->create($request->all());
         return redirect()->route('admin.slideshow.index')->withFlashSuccess(trans('alerts.backend.roles.created'));
     }
 
@@ -36,40 +50,52 @@ class SlideShowController extends Controller
 
     public function edit($id)
     {
-        //$department = $this->departments->findOrThrowException($id);
-        return view('backend.slideshow.edit');
+        $slideshow = $this->slideshows->findOrThrowException($id);
+        return view('backend.slideshow.edit',compact('slideshow'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateSlideshowRequest $request, $id)
     {
-        //$this->departments->update($id, $request->all());
+        $this->slideshows->update($id, $request->all());
         return redirect()->route('admin.slideshow.index')->withFlashSuccess(trans('alerts.backend.generals.updated'));
     }
 
-    public function destroy($id)
+    public function destroy(DeleteSlideshowRequest $request, $id)
     {
-        //$this->departments->destroy($id);
+        $this->slideshows->destroy($id);
         return redirect()->route('admin.slideshow.index')->withFlashSuccess(trans('alerts.backend.generals.deleted'));
     }
 
     public function data()
     {
 
-        $slideshows = DB::table('slideshows')
-            ->select(['id','code','name_kh','name_en','name_fr']);
+        $slideshows = DB::table('slide_shows')
+            ->select([
+                'id',
+                'image',
+                'title',
+                'description',
+                'page_url',
+                'reference_text',
+                'reference_link'
+            ]);
 
         $datatables =  app('datatables')->of($slideshows);
 
 
         return $datatables
-            ->editColumn('id', '{!! str_limit($id, 60) !!}')
-            ->editColumn('code', '{!! str_limit($code, 60) !!}')
-            ->editColumn('name_kh', '{!! str_limit($name_kh, 60) !!}')
-            ->editColumn('name_en', '{!! str_limit($name_en, 60) !!}')
-            ->editColumn('name_fr', '{!! str_limit($name_fr, 60) !!}')
-            ->addColumn('action', function ($department) {
-                return  '<a href="'.route('admin.configuration.departments.edit',$department->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
-                ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.configuration.departments.destroy', $department->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';
+            ->editColumn('image', function ($slideshow) {
+                return "<img src='".$slideshow->image."' width='100%'/>";
+            })
+            ->addColumn('about', function ($slideshow) {
+                return "<b>".$slideshow->title."</b><br/><p>".$slideshow->description."</p>";
+            })
+            ->addColumn('reference', function($slideshow) {
+                return "<b>".$slideshow->reference_text."</b><br/>".$slideshow->reference_link;
+            })
+            ->addColumn('action', function ($slideshow) {
+                return  '<a href="'.route('admin.slideshow.edit',$slideshow->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
+                ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.slideshow.destroy', $slideshow->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';
             })
             ->make(true);
     }

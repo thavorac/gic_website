@@ -92,7 +92,7 @@
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                         </button>
-                                        <a class="navbar-brand logo clearfix" href="index.html"><img src="/img/files/{{$department->logo}}" alt="" class="img-responsive" style="height: 43px !important; width: auto !important;" /></a>
+                                        <a class="navbar-brand logo clearfix" href="index.html"><img src="{{$department->logo}}" alt="" class="img-responsive" style="height: 43px !important; width: auto !important;" /></a>
                                     </div>
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="main-nav">

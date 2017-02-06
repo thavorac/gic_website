@@ -472,6 +472,42 @@ class SeedCustomsPermissions extends Seeder
                     ]
                 ],
                 [
+                    'name'=>'Slide show',
+                    'groups' => [
+
+                    ],
+                    'permissions' => [
+                        [
+                            'name'         => 'view-slideshow-management',
+                            'display_name' => 'View Slide Show Management',
+                            'dependency'   => [
+                                'view-backend'
+                            ]
+                        ],
+                        [
+                            'name' => 'create-slideshows',
+                            'display_name' => 'Create new slide show item',
+                            'dependency' => [
+                                'view-backend','view-slideshow-management'
+                            ]
+                        ],
+                        [
+                            'name' => 'edit-slideshows',
+                            'display_name' => 'Edit slide show item',
+                            'dependency' => [
+                                'view-backend','view-slideshow-management'
+                            ]
+                        ],
+                        [
+                            'name' => 'delete-slideshows',
+                            'display_name' => 'Delete existing slide show item',
+                            'dependency' => [
+                                'view-backend','view-slideshow-management'
+                            ]
+                        ]
+                    ]
+                ],
+                [
                     'name'=>'Scholarship',
                     'groups' => [
 

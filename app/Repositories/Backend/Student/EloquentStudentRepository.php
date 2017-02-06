@@ -62,6 +62,7 @@ class EloquentStudentRepository implements StudentRepositoryContract
             throw new GeneralException(trans('exceptions.backend.general.already_exists'));
         }
 
+        $input['dob'] = isset($input['dob'])?Carbon::createFromFormat("d/m/Y",$input['dob'])->format("Y-m-d"):null;
         $input['created_at'] = Carbon::now();
         $input['create_uid'] = auth()->id();
 

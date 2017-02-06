@@ -16,7 +16,8 @@
         "arcanedev/log-viewer": "~3.0",
         "arcanedev/no-captcha": "~3.0",
         "spatie/laravel-backup": "^3.0",
-        "yajra/laravel-datatables-oracle": "~6.0"
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "unisharp/laravel-filemanager": "1.7-alpha"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

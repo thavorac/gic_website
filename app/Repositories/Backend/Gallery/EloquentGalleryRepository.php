@@ -4,7 +4,9 @@ namespace App\Repositories\Backend\Gallery;
 
 
 use App\Exceptions\GeneralException;
+use App\Models\File;
 use App\Models\Gallery;
+use App\Models\GalleryImage;
 use App\Repositories\Backend\Gallery\GalleryRepositoryContract;
 use Carbon\Carbon;
 
@@ -52,17 +54,44 @@ class EloquentGalleryRepository implements GalleryRepositoryContract
     }
 
     /**
-     * @param  $input
+     * @param  $request
      * @throws GeneralException
      * @return bool
      */
-    public function create($input)
+    public function create($request)
     {
+        $success = false;
+
+        $input = $request->all();
         $input['created_at'] = Carbon::now();
         $input['create_uid'] = auth()->id();
 
+        if($gallery = Gallery::create($input)){
+            $success = true;
+        }
 
-        if (Gallery::create($input)) {
+        // Logo
+        if($request->file('image')!= null){
+            $ids = [];
+            // There are some images, so store to files first.
+            foreach($request->file('image') as $file){
+                $now = Carbon::now();
+                $imageName = $now->timestamp."_".trim(strtolower($file->getClientOriginalName()));
+                $file->move(
+                    base_path() . '/public/files/images/gallery/', $imageName
+                );
+
+                $image = new GalleryImage();
+                $image->image = $imageName;
+                $image->gallery_id = $gallery->id;
+
+                if($image->save()){
+                    $success = true;
+                }
+            }
+        }
+
+        if ($success) {
             return true;
         }
 

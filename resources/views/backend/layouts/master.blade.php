@@ -9,8 +9,8 @@
         <title>@yield('title', app_name())</title>
 
         <!-- Meta -->
-        <meta name="description" content="@yield('meta_description', 'Default Description')">
-        <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
+        <meta name="description" content="@yield('meta_description', 'Department GIC official website')">
+        <meta name="author" content="@yield('meta_author', 'Thavorac CHUN')">
         @yield('meta')
 
         <!-- Styles -->
@@ -24,7 +24,11 @@
         @else
             {{ Html::style(elixir('css/backend.css')) }}
         @endif
-
+        <style>
+            .main-header .logo{
+                font-size: 15px !important;
+            }
+        </style>
         @yield('after-styles-end')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

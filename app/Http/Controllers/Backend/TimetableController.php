@@ -31,7 +31,7 @@ class TimetableController extends Controller
 
     public function create()
     {
-        $academic_years = AcademicYear::lists('year','id');
+        $academic_years = AcademicYear::lists('description','id');
         return view('backend.timetable.create',compact('academic_years'));
     }
 
@@ -68,14 +68,58 @@ class TimetableController extends Controller
     {
 
         $timetables = DB::table('timetables')
-            ->select(['id','name','trimester','file','description','academic_year_id']);
+            ->join('academic_years','timetables.academic_year_id','=','academic_years.id')
+            ->select([
+                'timetables.id',
+                'timetables.name',
+                'timetables.trimester',
+                'timetables.file',
+                'timetables.description',
+                'academic_years.description as academic_year'
+            ]);
 
         $datatables =  app('datatables')->of($timetables);
 
         return $datatables
-            ->addColumn('action', function ($timetable) {
-                return  '<a href="'.route('admin.timetable.edit',$timetable->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
-                ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.timetable.destroy', $timetable->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';
+            ->addColumn('info', function($timetable) {
+                ob_start();
+                ?>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <embed src="<?php echo $timetable->file ?>" width="100%" height="400px" style="overflow: hidden"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <b><?php echo $timetable->name ?></b>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <?php echo $timetable->trimester ?>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <?php echo $timetable->academic_year ?>
+                                        <p>
+                                            <?php echo $timetable->description ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12" style="margin-top: 15px">
+                                <a href="<?php echo route('admin.timetable.edit',$timetable->id) ?>" class="btn btn-xs btn-primary">
+                                    <i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php echo trans('buttons.general.crud.edit') ?>"></i>
+                                </a>
+                                <button class="btn btn-xs btn-danger btn-delete" data-remote="<?php echo route('admin.timetable.destroy', $timetable->id) ?>">
+                                    <i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="<?php echo trans('buttons.general.crud.delete') ?>"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                $html = ob_get_clean();
+                return $html;
             })
             ->make(true);
     }

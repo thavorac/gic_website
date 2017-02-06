@@ -58,6 +58,8 @@ class EloquentEventRepository implements EventRepositoryContract
      */
     public function create($input)
     {
+        $input['date_start'] = Carbon::createFromFormat("d/m/Y",$input['date_start']);
+        $input['date_end'] = Carbon::createFromFormat("d/m/Y",$input['date_end']);
         $input['created_at'] = Carbon::now();
         $input['create_uid'] = auth()->id();
 

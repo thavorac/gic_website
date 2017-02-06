@@ -30,11 +30,9 @@
                 <table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%" id="data-table">
                     <thead>
                     <tr>
-                        <th>{{ trans('labels.general.id') }}</th>
+                        <th>{{ trans('labels.backend.event.fields.date') }}</th>
                         <th>{{ trans('labels.backend.event.fields.name') }}</th>
-                        <th>{{ trans('labels.backend.event.fields.start') }}</th>
-                        <th>{{ trans('labels.backend.event.fields.require_register') }}</th>
-                        <th>{{ trans('labels.backend.event.fields.pending') }}</th>
+                        <th>{{ trans('labels.backend.event.fields.file') }}</th>
                         <th>{{ trans('labels.general.actions') }}</th>
                     </tr>
                     </thead>
@@ -61,11 +59,9 @@
                     method: 'POST'
                 },
                 columns: [
-                    { data: 'id', name: 'id'},
+                    { data: 'date_start', name: 'date_start',orderable: false},
                     { data: 'name', name: 'name'},
-                    { data: 'start', name: 'start',orderable: false, searchable: false},
-                    { data: 'require_register', name: 'require_register',orderable: false, searchable: false},
-                    { data: 'pending', name: 'pending',orderable: false, searchable: false},
+                    { data: 'file', name: 'file',orderable: false, searchable: false},
                     { data: 'action', name: 'action',orderable: false, searchable: false}
                 ]
             });

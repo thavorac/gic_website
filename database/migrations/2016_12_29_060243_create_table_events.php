@@ -16,12 +16,15 @@ class CreateTableEvents extends Migration
         {
             $table->increments('id');
             $table->string('name');
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->date('date_start');
+            $table->date('date_end');
+            $table->time('time_start');
+            $table->time('time_end');
             $table->boolean('require_register')->default(false);
             $table->boolean('pending')->default(true);
             $table->string('file')->nullable();
             $table->text('about')->nullable();
+            $table->string('location');
 
             $table->timestamps();
             $table->integer('create_uid')->unsigned()->index();

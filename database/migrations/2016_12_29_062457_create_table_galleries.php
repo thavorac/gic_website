@@ -17,7 +17,6 @@ class CreateTableGalleries extends Migration
             $table->increments('id');
             $table->string('title')->nullable();
             $table->string('description')->nullable();
-            $table->string('image');
             $table->string('belong_to')->nullable(); // Belong to who (staff, course, department ....)
             $table->integer('belong_to_id')->nullable();
             $table->integer('level')->default(1); // Important level

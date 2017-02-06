@@ -31,9 +31,14 @@ class Scholarship extends Model {
         'updated_at'
     ];
 
+    public function scholarship_winners(){
+        return $this->hasMany(ScholarshipWinner::class,'scholarship_id');
+    }
+
     public function creator(){
         return $this->belongsTo(User::class,'create_uid');
     }
+
     public function lastModifier(){
         return $this->belongsTo(User::class,'write_uid');
     }

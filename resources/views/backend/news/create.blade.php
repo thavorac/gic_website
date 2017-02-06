@@ -39,12 +39,13 @@
 @stop
 
 @section('after-scripts-end')
-    {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
-    {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
+
     {!! Html::script('plugins/tinymce/tinymce.min.js') !!}
+    {!! Html::script('vendor/laravel-filemanager/js/lfm.js') !!}
     <script>
         tinymce_height = 600;
         $(function() {
+            $('#lfm').filemanager('file');
         });
     </script>
     {!! Html::script('js/backend/init-tinymce.js') !!}

@@ -7,6 +7,8 @@ use App\Exceptions\GeneralException;
 use App\Models\Partner;
 use App\Repositories\Backend\Partner\PartnerRepositoryContract;
 use Carbon\Carbon;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Response;
 
 /**
  * Class EloquentRoleRepository
@@ -62,6 +64,12 @@ class EloquentPartnerRepository implements PartnerRepositoryContract
             throw new GeneralException(trans('exceptions.backend.general.already_exists'));
         }
 
+        if(isset($input['mou'])) {
+            $input['mou'] = true;
+        } else {
+            $input['mou'] = false;
+        }
+
         $input['created_at'] = Carbon::now();
         $input['create_uid'] = auth()->id();
 
@@ -104,11 +112,14 @@ class EloquentPartnerRepository implements PartnerRepositoryContract
 
         $model = $this->findOrThrowException($id);
 
-        if ($model->delete()) {
-            return true;
+        try {
+            if ($model->delete()) {
+                return true;
+            }
+        } catch (QueryException $e) {
+            //throw new GeneralException($e->errorInfo);
+            return Response::json(array("success"=> false, "message" => $e->errorInfo));
         }
-
-        throw new GeneralException(trans('exceptions.backend.general.delete_error'));
     }
 
 

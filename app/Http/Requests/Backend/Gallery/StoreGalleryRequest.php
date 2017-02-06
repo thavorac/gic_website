@@ -28,7 +28,7 @@ class StoreGalleryRequest extends Request
     public function rules()
     {
         return [
-            'image' => 'required'
+            'title' => 'required'
         ];
     }
 }

@@ -14,7 +14,7 @@
             <div class="form-group">
                 {!! Form::label('image', trans('labels.backend.gallery.fields.image'), ['class' => 'col-lg-3 control-label']) !!}
                 <div class="col-lg-9">
-                    {!! Form::file('image', null, ['class' => 'form-control']) !!}
+                    <input id="image" name="image[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
                 </div>
             </div>
 

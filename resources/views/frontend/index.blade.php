@@ -16,70 +16,35 @@
                 <div class="col-sm-12 col-xs-12">
                     <div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
                         <div class="slides carousel-inner">
-                            <div class="item active">
-                                <img src="img/frontend/home/slider/slider_image_1.jpg" alt="" />
+                            <?php $first = true; ?>
+                            @foreach($sliders as $slider)
+                            <div class="item
+                                <?php
+                                    if($first) {
+                                        echo "active";
+                                        $first = false;
+                                    }
+                                ?>
+                            ">
+                                <img src="{{$slider->image}}" alt="" />
                                 <div class="banner_caption">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <div class="caption_inner animated fadeInUp">
-                                                    <h1>Welcome To {{$department->name_en}}</h1>
-                                                    <p>{{$department->headline}}</p>
-                                                    <a href="about.html">Learn More</a>
-                                                </div><!--end caption_inner-->
+                                                    <h1>{{$slider->title}}</h1>
+                                                    <p>{{$slider->description}}</p>
+                                                    @if($slider->reference_text != null)
+                                                    <a href="{{$slider->reference_link}}">{{$slider->reference_text}}</a>
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div><!--end row-->
-                                    </div><!--end container-->
-                                </div><!--end banner_caption-->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item">
-                                <img src="img/frontend/home/slider/slider_image_2.jpg" alt="" />
-                                <div class="banner_caption">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <div class="caption_inner animated fadeInUp">
-                                                    <h1>Admission going on</h1>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis. Mauris porta fermentum volutpat. Praesent est sapien, tincidunt vel arcu vitae, mattis sollicitudin lectus.</p>
-                                                    <a href="buying-steps.html">Apply Now</a>
-                                                </div><!--end caption_inner-->
-                                            </div>
-                                        </div><!--end row-->
-                                    </div><!--end container-->
-                                </div><!--end banner_caption-->
-                            </div>
-                            <div class="item">
-                                <img src="img/frontend/home/slider/slider_image_3.jpg" alt="" />
-                                <div class="banner_caption">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <div class="caption_inner animated fadeInUp">
-                                                    <h1>Arrange a tour to our college</h1>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis. Mauris porta fermentum volutpat. Praesent est sapien, tincidunt vel arcu vitae, mattis sollicitudin lectus.</p>
-                                                    <a href="contact-us.html">Contact Us</a>
-                                                </div><!--end caption_inner-->
-                                            </div>
-                                        </div><!--end row-->
-                                    </div><!--end container-->
-                                </div><!--end banner_caption-->
-                            </div>
-                            <div class="item">
-                                <img src="img/frontend/home/slider/slider_image_4.jpg" alt="" />
-                                <div class="banner_caption">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <div class="caption_inner animated fadeInUp">
-                                                    <h1>Find your dream course</h1>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur ante volutpat sem aliquam lobortis. Mauris porta fermentum volutpat. Praesent est sapien, tincidunt vel arcu vitae, mattis sollicitudin lectus.</p>
-                                                    <a href="course-fullwidth.html">Find Course</a>
-                                                </div><!--end caption_inner-->
-                                            </div>
-                                        </div><!--end row-->
-                                    </div><!--end container-->
-                                </div><!--end banner_caption-->
-                            </div>
+                            @endforeach
+
                         </div>
                         <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
                             <img src="img/frontend/home/slider/prev.png">
@@ -144,42 +109,7 @@
                 </div><!-- col-sm-8 col-xs-12 -->
 
                 <div class="col-sm-4 col-xs-12">
-                    <div class="related_post_sec">
-                        <div class="list_block">
-                            <h3>Latest News</h3>
-                            <ul>
-                                <li>
-                                    <span class="rel_thumb">
-                                        <img src="img/news/rel_thumb.png" alt="">
-                                    </span><!--end rel_thumb-->
-                                    <div class="rel_right">
-                                        <a href="single-post-right-sidebar.html"><h4>Offered in small class sizes with great emphasis...</h4></a>
-                                        <span class="date">Posted: <a href="single-post-right-sidebar.html">January 24, 2015</a></span>
-                                    </div><!--end rel right-->
-                                </li>
-                                <li>
-                                    <span class="rel_thumb">
-                                        <img src="img/news/rel_thumb.png" alt="">
-                                    </span><!--end rel_thumb-->
-                                    <div class="rel_right">
-                                        <a href="single-post-right-sidebar.html"><h4>Offered in small class sizes with great emphasis...</h4></a>
-                                        <span class="date">Posted: <a href="single-post-right-sidebar.html">January 24, 2015</a></span>
-                                    </div><!--end rel right-->
-                                </li>
-                                <li>
-                                    <span class="rel_thumb">
-                                        <img src="img/news/rel_thumb.png" alt="">
-                                    </span><!--end rel_thumb-->
-                                    <div class="rel_right">
-                                        <a href="single-post-right-sidebar.html"><h4>Offered in small class sizes with great emphasis...</h4></a>
-                                        <span class="date">Posted: <a href="single-post-right-sidebar.html">January 24, 2015</a></span>
-                                    </div><!--end rel right-->
-                                </li>
-                            </ul>
-                            <a href="#" class="more_post">More</a>
-                        </div>
 
-                    </div><!--end related_post_sec-->
 
                     <div class="list_block related_post_sec">
                         <div class="upcoming_events">

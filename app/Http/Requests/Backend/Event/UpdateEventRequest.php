@@ -29,10 +29,13 @@ class UpdateEventRequest extends Request
     {
         return [
             'name' => 'required',
-            'start' => 'required',
-            'end' => 'required',
+            'date_start' => 'required',
+            'date_end' => 'required',
+            'time_start' => 'required',
+            'time_end' => 'required',
             'require_register' => 'required',
-            'pending' => 'required'
+            'pending' => 'required',
+            'location' => 'required'
         ];
     }
 }

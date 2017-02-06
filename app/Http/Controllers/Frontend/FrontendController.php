@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Department;
+use App\Models\SlideShow;
 
 /**
  * Class FrontendController
@@ -17,7 +18,8 @@ class FrontendController extends Controller
     public function index()
     {
         $department = Department::where('code','GIC')->first();
-        return view('frontend.index',compact('department'));
+        $sliders = SlideShow::get();
+        return view('frontend.index',compact('department','sliders'));
     }
 
     /**

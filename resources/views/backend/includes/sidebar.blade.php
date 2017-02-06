@@ -25,9 +25,6 @@
             <li class="{{ Active::pattern('admin/dashboard') }}">
                 {{ link_to_route('admin.dashboard', trans('menus.backend.sidebar.dashboard')) }}
             </li>
-            <li class="{{ Active::pattern('admin/slideshow') }}">
-                {{ link_to_route('admin.slideshow.index', trans('menus.backend.sidebar.slideshow')) }}
-            </li>
             <li class="
                         {{ Active::pattern('admin/news*') }}
                         {{ Active::pattern('admin/student_message*') }}
@@ -138,6 +135,7 @@
                         {{ Active::pattern('admin/file*') }}
                         {{ Active::pattern('admin/gallery*') }}
                         {{ Active::pattern('admin/useful_link*') }}
+                        {{ Active::pattern('admin/slideshow*') }}
                     treeview">
                 <a href="#">
                     <span>Resources</span>
@@ -147,6 +145,7 @@
                     {{ Active::pattern('admin/file*', 'menu-open') }}
                     {{ Active::pattern('admin/gallery*', 'menu-open') }}
                     {{ Active::pattern('admin/useful_link*', 'menu-open') }} ">
+                    {{ Active::pattern('admin/slideshow*', 'menu-open') }} ">
                     <li class="{{ Active::pattern('admin/file*') }}">
                         {{ link_to_route('admin.file.index', trans('menus.backend.sidebar.file')) }}
                     </li>
@@ -155,6 +154,9 @@
                     </li>
                     <li class="{{ Active::pattern('admin/useful_link*') }}">
                         {{ link_to_route('admin.useful_link.index', trans('menus.backend.sidebar.useful_link')) }}
+                    </li>
+                    <li class="{{ Active::pattern('admin/slideshow*') }}">
+                        {{ link_to_route('admin.slideshow.index', trans('menus.backend.sidebar.slideshow')) }}
                     </li>
                 </ul>
             </li>

@@ -24,7 +24,6 @@ class Gallery extends Model {
 	protected $fillable = [
         'title',
         'description',
-        'image',
         'belong_to',
         'belong_to_id',
         'level',
@@ -33,7 +32,9 @@ class Gallery extends Model {
         'created_at',
         'updated_at'
     ];
-
+    public function images(){
+        return $this->hasMany(GalleryImage::class);
+    }
     public function creator(){
         return $this->belongsTo(User::class,'create_uid');
     }

@@ -104,6 +104,11 @@ class EloquentScholarshipRepository implements ScholarshipRepositoryContract
 
         $model = $this->findOrThrowException($id);
 
+        $scholarship_winners = $model->scholarship_winners->toArray();
+        if(!empty($scholarship_winners)){
+            return false;
+        }
+
         if ($model->delete()) {
             return true;
         }

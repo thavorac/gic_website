@@ -72,21 +72,20 @@
                     </div>
                 </div>
             </div>
-
             <div class="form-group">
-                {!! Form::label('logo', trans('labels.backend.department.fields.logo'), ['class' => 'col-lg-3 control-label']) !!}
+                <label class="col-lg-3 control-label">{{trans('labels.backend.department.fields.logo')}}</label>
                 <div class="col-lg-9">
-                    {!! Form::file('logo', ['class' => 'form-control']) !!}
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <a id="lfm" data-input="logo" data-preview="holder" class="btn btn-primary">
+                                <i class="fa fa-picture-o"></i> Choose
+                            </a>
+                        </span>
+                        <input id="logo" class="form-control" type="text" name="logo">
+                    </div>
+                    <img id="holder" style="margin-top:15px;max-height:100px;">
                 </div>
             </div>
-            @if(isset($department->logo))
-            <div class="form-group">
-                {!! Form::label('', "", ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-3">
-                    <a target="_blank" href="{{'/img/files/'.$department->logo}}">{{$department->logo}}</a>
-                </div>
-            </div>
-            @endif
 
             <div class="form-group">
                 {!! Form::label('address', trans('labels.backend.department.fields.address'), ['class' => 'col-lg-3 control-label']) !!}

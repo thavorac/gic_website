@@ -30,12 +30,10 @@
                 <table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%" id="data-table">
                     <thead>
                     <tr>
-                        <th>{{ trans('labels.general.id') }}</th>
-                        <th>{{ trans('labels.backend.student.fields.name_kh') }}</th>
-                        <th>{{ trans('labels.backend.student.fields.dob') }}</th>
-                        <th>{{ trans('labels.backend.student.fields.personal_phone') }}</th>
-                        <th>{{ trans('labels.backend.student.fields.parent_phone') }}</th>
-                        <th>{{ trans('labels.general.actions') }}</th>
+                        <th width="300px">{{ trans('labels.backend.student.fields.general_info') }}</th>
+                        <th>{{ trans('labels.backend.student.fields.about') }}</th>
+                        <th>{{ trans('labels.backend.student.fields.description') }}</th>
+                        <th width="1cm">{{ trans('labels.general.actions') }}</th>
                     </tr>
                     </thead>
                 </table>
@@ -61,11 +59,9 @@
                     method: 'POST'
                 },
                 columns: [
-                    { data: 'id', name: 'id'},
-                    { data: 'name_kh', name: 'name_kh'},
-                    { data: 'dob', name: 'dob',orderable: false, searchable: false},
-                    { data: 'personal_phone', name: 'personal_phone',orderable: false, searchable: false},
-                    { data: 'parent_phone', name: 'parent_phone',orderable: false, searchable: false},
+                    { data: 'general_info', name: 'name_kh'},
+                    { data: 'about', name: 'about',orderable: false, searchable: false},
+                    { data: 'description', name: 'description',orderable: false},
                     { data: 'action', name: 'action',orderable: false, searchable: false}
                 ]
             });

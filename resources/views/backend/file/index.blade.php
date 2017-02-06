@@ -1,5 +1,4 @@
 @extends ('backend.layouts.master')
-
 @section ('title', trans('labels.backend.file.title.main'))
 
 @section('page-header')
@@ -11,64 +10,18 @@
 @endsection
 
 @section('after-styles-end')
-    {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
+
 @stop
 
 @section('content')
-    <div class="box box-success">
-        <div class="box-header with-border">
-            <div class="mailbox-controls">
-                <a href="{!! route('admin.file.create') !!}">
-                    <button class="btn btn-primary btn-sm"><i class="fa fa-plus-circle"></i> Add </button>
-                </a>
-                <button class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
-            </div>
-        </div>
 
-        <div class="box-body">
-            <div>
-                <table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%" id="data-table">
-                    <thead>
-                    <tr>
-                        <th>{{ trans('labels.general.id') }}</th>
-                        <th>{{ trans('labels.backend.file.fields.name') }}</th>
-                        <th>{{ trans('labels.backend.file.fields.url') }}</th>
-                        <th>{{ trans('labels.backend.file.fields.description') }}</th>
-                        <th>{{ trans('labels.general.actions') }}</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
+    <iframe id="frame" src='/laravel-filemanager?type=Files' frameborder="0" scrolling="no" width="100%" height="610"></iframe>
 
-            <div class="clearfix"></div>
-        </div>
-    </div>
 @stop
 
 @section('after-scripts-end')
-    {!! Html::script('plugins/datatables/jquery.dataTables.min.js') !!}
-    {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
+    <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
     <script>
-
-        $(function() {
-            $('#data-table').DataTable({
-                processing: true,
-                serverSide: true,
-                pageLength: {!! config('app.records_per_page')!!},
-                ajax: {
-                    url: '{!! route('admin.file.data') !!}',
-                    method: 'POST'
-                },
-                columns: [
-                    { data: 'id', name: 'id'},
-                    { data: 'name', name: 'name'},
-                    { data: 'url', name: 'url',orderable: false, searchable: false},
-                    { data: 'description', name: 'description',orderable: false, searchable: false},
-                    { data: 'action', name: 'action',orderable: false, searchable: false}
-                ]
-            });
-
-            enableDeleteRecord($('#data-table'));
-        });
     </script>
+
 @stop

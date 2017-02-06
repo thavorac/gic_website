@@ -30,9 +30,11 @@
 
 @section('after-scripts-end')
     {!! Html::script('plugins/tinymce/tinymce.min.js') !!}
+    {!! Html::script('vendor/laravel-filemanager/js/lfm.js') !!}
     <script>
         tinymce_height = 600;
         $(function() {
+            $('#lfm').filemanager('file');
         });
     </script>
     {!! Html::script('js/backend/init-tinymce.js') !!}

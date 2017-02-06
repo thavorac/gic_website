@@ -16,6 +16,7 @@ class CreateTableNews extends Migration
         {
             $table->increments('id');
             $table->string('title');
+            $table->string('image')->nullable();
             $table->text('context');
             $table->timestamps();
 

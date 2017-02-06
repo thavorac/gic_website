@@ -74,6 +74,12 @@ class PartnerController extends Controller
 
 
         return $datatables
+            ->editColumn('name', function($partner) {
+                return "<h2>".$partner->name."</h2><br/>".$partner->description;
+            })
+            ->editColumn('logo', function($partner) {
+                return "<img width='100px' src='".$partner->logo."' />";
+            })
             ->addColumn('action', function ($partner) {
                 return  '<a href="'.route('admin.partner.edit',$partner->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
                 ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.partner.destroy', $partner->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';

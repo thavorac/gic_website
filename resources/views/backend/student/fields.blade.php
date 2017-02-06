@@ -6,16 +6,12 @@
     <div class="tab-content">
         <div class="tab-pane active" id="tab_1-1">
             <div class="form-group">
-                {!! Form::label('name_kh', trans('labels.backend.student.fields.name_kh'), ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-9">
-                    {!! Form::text('name_kh', null, ['class' => 'form-control']) !!}
+                {!! Form::label('name_kh', trans('labels.backend.student.fields.name'), ['class' => 'col-lg-3 control-label']) !!}
+                <div class="col-lg-4">
+                    {!! Form::text('name_kh', null, ['class' => 'form-control','placeholder' => trans('labels.backend.student.fields.name_kh')]) !!}
                 </div>
-            </div>
-
-            <div class="form-group">
-                {!! Form::label('name_latin', trans('labels.backend.student.fields.name_latin'), ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-9">
-                    {!! Form::text('name_latin', null, ['class' => 'form-control']) !!}
+                <div class="col-lg-5">
+                    {!! Form::text('name_latin', null, ['class' => 'form-control', 'placeholder' => trans('labels.backend.student.fields.name_latin')]) !!}
                 </div>
             </div>
 
@@ -29,8 +25,17 @@
             <div class="form-group">
                 {!! Form::label('photo', trans('labels.backend.student.fields.photo'), ['class' => 'col-lg-3 control-label']) !!}
                 <div class="col-lg-9">
-                    {!! Form::file('photo', ['class' => 'form-control']) !!}
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <a id="lfm" data-input="photo" data-preview="holder" class="btn btn-primary">
+                                <i class="fa fa-picture-o"></i> Choose
+                            </a>
+                        </span>
+                        <input id="photo" class="form-control" type="text" name="photo">
+                    </div>
+                    <img id="holder" style="margin-top:15px;max-height:100px;">
                 </div>
+
             </div>
 
             <div class="form-group">
@@ -42,22 +47,33 @@
 
             <div class="form-group">
                 {!! Form::label('personal_phone', trans('labels.backend.student.fields.personal_phone'), ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-9">
-                    {!! Form::text('personal_phone', null, ['class' => 'form-control']) !!}
+                <div class="col-lg-3">
+                    {{--{!! Form::text('personal_phone', null, ['class' => 'form-control']) !!}--}}
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input type="text" name="personal_phone" class="form-control" placeholder="{{trans('labels.backend.student.fields.personal_phone')}}">
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
                 {!! Form::label('parent_phone', trans('labels.backend.student.fields.parent_phone'), ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-9">
-                    {!! Form::text('parent_phone', null, ['class' => 'form-control']) !!}
+                <div class="col-lg-3">
+                    {{--{!! Form::text('parent_phone', null, ['class' => 'form-control']) !!}--}}
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input type="text" name="parent_phone" class="form-control" placeholder="{{trans('labels.backend.student.fields.parent_phone')}}">
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
                 {!! Form::label('email', trans('labels.backend.student.fields.email'), ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-9">
-                    {!! Form::text('email', null, ['class' => 'form-control']) !!}
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" class="form-control" placeholder="{{trans('labels.backend.student.fields.email')}}">
+                    </div>
                 </div>
             </div>
 

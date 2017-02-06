@@ -74,6 +74,12 @@ class ProgramController extends Controller
 
 
         return $datatables
+            ->editColumn('syllabus',function($program) {
+                return "<a href='".$program->syllabus."'>Attached file</a>";
+            })
+            ->editColumn('name', function($program){
+                return "<h3>".$program->name."</h3><br/>".$program->about;
+            })
             ->addColumn('action', function ($program) {
                 return  '<a href="'.route('admin.program.edit',$program->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
                 ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.program.destroy', $program->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';

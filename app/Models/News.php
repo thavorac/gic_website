@@ -23,6 +23,7 @@ class News extends Model {
 	 */
 	protected $fillable = [
         'title',
+        'image',
         'context',
         'create_uid',
         'write_uid',

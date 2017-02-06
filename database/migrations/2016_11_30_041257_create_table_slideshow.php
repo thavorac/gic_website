@@ -29,10 +29,10 @@ class CreateTableSlideshow extends Migration
 
 
 
-            $table->string('image',100);
+            $table->string('image');
             $table->string('title');
-            $table->string('description');
-            $table->integer('page_id');
+            $table->text('description');
+            $table->string('page_url');
             $table->boolean('active')->default(true);
             $table->string('reference_link')->nullable();
             $table->string('reference_text')->nullable();

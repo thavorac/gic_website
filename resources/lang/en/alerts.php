@@ -28,11 +28,17 @@ return [
             'restored' => 'The user was successfully restored.',
             'updated' => 'The user was successfully updated.',
             'updated_password' => "The user's password was successfully updated.",
+        ],
+        'scholarships' => [
+            "error" => [
+                "deleted" => "Record is not deleted! Scholarship winners might referencing to this scholarship."
+            ]
         ]
     ],
     'generals' => [
         'created' => "Record is successfully created!",
         'updated' => "Record is successfully updated!",
-        'deleted' => "Record is successfully deleted!"
+        'deleted' => "Record is successfully deleted!",
+        'error_deleted' => "Record is not deleted! Something went wrong."
     ]
 ];

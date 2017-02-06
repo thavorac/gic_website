@@ -193,12 +193,16 @@ return [
             ],
             'fields'=>[
                 'name' => 'Name',
-                'start' => 'Start',
-                'end' => 'End',
+                'date' => 'Date',
+                'date_start' => 'Date Start',
+                'date_end' => 'Date End',
+                'time_start' => 'Time Start',
+                'time_end' => 'Time End',
                 'require_register' => 'Require Register',
                 'pending' => 'Pending',
                 'file' => 'File',
-                'about' => 'About'
+                'about' => 'About',
+                'location' => "Location"
             ]
         ],
         'file' => [
@@ -233,6 +237,27 @@ return [
                 'level' => 'Level'
             ]
         ],
+        'slideshow' => [
+            'title' => [
+                'main' => 'Slide Show Item',
+                'index' => 'All existing slide show item',
+                'edit' => 'Edit slide show item',
+                'create' => 'Create new slide show item',
+                'detail' => 'Detail of a slide show item',
+                'import' => 'Import slide show items'
+            ],
+            'fields'=>[
+                'image' => 'Image',
+                'title' => 'Title',
+                'description' => 'Description',
+                'page_url' => 'Page URL',
+                'active' => 'Active',
+                'about' => 'About this slide show',
+                'reference_link' => 'Reference Link',
+                'reference_text' => 'Reference Text',
+                'reference' => 'Reference'
+            ]
+        ],
         'mission' => [
             'title' => [
                 'main' => 'Mission',
@@ -260,6 +285,7 @@ return [
             ],
             'fields'=>[
                 'title' => 'Title',
+                'image' => "Image",
                 'context' => 'Context',
             ]
         ],
@@ -424,8 +450,11 @@ return [
                 'import' => 'Import students'
             ],
             'fields'=>[
+                'general_info' => 'General Info',
+                'contact' => 'Contact',
                 'name_kh' => 'Name KH',
                 'name_latin' => 'Name Latin',
+                'name' => 'Name',
                 'photo' => 'Photo',
                 'dob' => "Date of birth",
                 'personal_phone' => 'Personal Phone',

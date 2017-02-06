@@ -16,7 +16,7 @@ class CreateTableTimetables extends Migration
         {
             $table->increments('id');
             $table->string('name');
-            $table->integer('trimester');
+            $table->string('trimester',50);
             $table->string('file');
             $table->string('description')->nullable();
             $table->timestamps();

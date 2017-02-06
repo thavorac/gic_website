@@ -32,7 +32,7 @@ class SlideShow extends Model {
         'write_uid',
         'created_at',
         'updated_at',
-        'page_id'
+        'page_url'
     ];
 
     public function creator(){

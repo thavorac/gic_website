@@ -8,6 +8,7 @@ use App\Http\Requests\Backend\Scholarship\StoreScholarshipRequest;
 use App\Http\Requests\Backend\Scholarship\UpdateScholarshipRequest;
 use App\Repositories\Backend\Scholarship\ScholarshipRepositoryContract;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 /**
  * Class ScholarshipController
@@ -59,8 +60,12 @@ class ScholarshipController extends Controller
 
     public function destroy(DeleteScholarshipRequest $request, $id)
     {
-        $this->scholarships->destroy($id);
-        return redirect()->route('admin.scholarship.index')->withFlashSuccess(trans('alerts.generals.deleted'));
+        if($this->scholarships->destroy($id)){
+            //return redirect()->route('admin.scholarship.index')->withFlashSuccess(trans('alerts.generals.deleted'));
+            return Response::json(array("success"=>true,"message"=>trans('alerts.generals.deleted')));
+        } else {
+            return Response::json(array("success"=>false,"message"=>trans('alerts.backend.scholarships.error.deleted')));
+        }
     }
 
     public function data()

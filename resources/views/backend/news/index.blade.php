@@ -12,6 +12,7 @@
 
 @section('after-styles-end')
     {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
+    <link rel="stylesheet" href="{{url('plugins/bootstrap-fileinput/css/fileinput.min.css')}}">
 @stop
 
 @section('content')
@@ -30,9 +31,8 @@
                 <table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%" id="data-table">
                     <thead>
                     <tr>
-                        <th>{{ trans('labels.general.id') }}</th>
-                        <th>{{ trans('labels.backend.news.fields.title') }}</th>
                         <th>{{ trans('labels.backend.news.fields.context') }}</th>
+                        <th>{{ trans('labels.backend.news.fields.image') }}</th>
                         <th>{{ trans('labels.general.actions') }}</th>
                     </tr>
                     </thead>
@@ -59,9 +59,8 @@
                     method: 'POST'
                 },
                 columns: [
-                    { data: 'id', name: 'id'},
-                    { data: 'title', name: 'title'},
-                    { data: 'context', name: 'context',orderable: false, searchable: false},
+                    { data: 'context', name: 'title'},
+                    { data: 'image', name: 'image'},
                     { data: 'action', name: 'action',orderable: false, searchable: false}
                 ]
             });

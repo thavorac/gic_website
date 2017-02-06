@@ -7,6 +7,7 @@ use App\Http\Requests\Backend\Event\DeleteEventRequest;
 use App\Http\Requests\Backend\Event\StoreEventRequest;
 use App\Http\Requests\Backend\Event\UpdateEventRequest;
 use App\Repositories\Backend\Event\EventRepositoryContract;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -68,12 +69,32 @@ class EventController extends Controller
     {
 
         $events = DB::table('events')
-            ->select(['id','name','start','end','require_register','pending','file','about']);
+            ->select([
+                'id',
+                'name',
+                'date_start',
+                'date_end',
+                'time_start',
+                'time_end',
+                'require_register',
+                'pending',
+                'file',
+                'about'
+            ]);
 
         $datatables =  app('datatables')->of($events);
 
 
         return $datatables
+            ->editColumn('date_start', function($event) {
+                return Carbon::createFromFormat('Y-m-d',$event->date_start)->format('d/m/Y')." - ".Carbon::createFromFormat('Y-m-d',$event->date_end)->format('d/m/Y');
+            })
+            ->editColumn('name', function($event) {
+                return "<strong>".$event->name."</strong><br/>".$event->about;
+            })
+            ->editColumn('file', function($event) {
+                return "<a href='".$event->file."'>Attached file</a>";
+            })
             ->addColumn('action', function ($event) {
                 return  '<a href="'.route('admin.event.edit',$event->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
                 ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.event.destroy', $event->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';

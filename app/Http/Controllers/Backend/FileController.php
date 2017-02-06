@@ -7,6 +7,7 @@ use App\Http\Requests\Backend\File\StoreFileRequest;
 use App\Http\Requests\Backend\File\UpdateFileRequest;
 use App\Repositories\Backend\File\FileRepositoryContract;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 /**
  * Class FileController
@@ -60,6 +61,66 @@ class FileController extends Controller
     {
         $this->files->destroy($id);
         return redirect()->route('admin.file.index')->withFlashSuccess(trans('alerts.generals.deleted'));
+    }
+
+    // This function scans the files folder recursively, and builds a large array
+
+    private function scan($dir){
+
+        $files = array();
+
+        // Is there actually such a folder/file?
+
+        if(file_exists($dir)){
+
+            foreach(scandir($dir) as $f) {
+
+                if(!$f || $f[0] == '.') {
+                    continue; // Ignore hidden files
+                }
+
+                if(is_dir($dir . '/' . $f)) {
+
+                    // The path is a folder
+
+                    $files[] = array(
+                        "name" => $f,
+                        "type" => "folder",
+                        "path" => $dir . '/' . $f,
+                        "items" => $this->scan($dir . '/' . $f) // Recursively get the contents of the folder
+                    );
+                }
+
+                else {
+
+                    // It is a file
+
+                    $files[] = array(
+                        "name" => $f,
+                        "type" => "file",
+                        "path" => $dir . '/' . $f,
+                        "size" => filesize($dir . '/' . $f) // Gets the size of this file
+                    );
+                }
+            }
+
+        }
+
+        return $files;
+    }
+
+    public function get_files(){
+        $dir = "files";
+
+        // Run the recursive function
+        $response = $this->scan($dir);
+
+        return Response::json(array(
+            "name" => "files",
+            "type" => "folder",
+            "path" => $dir,
+            "items" => $response
+        ));
     }
 
     public function data()

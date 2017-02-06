@@ -37,6 +37,7 @@ class NewsController extends Controller
 
     public function store(StoreNewsRequest $request)
     {
+
         $this->news->create($request->all());
         return redirect()->route('admin.news.index')->withFlashSuccess(trans('alerts.generals.created'));
     }
@@ -68,12 +69,39 @@ class NewsController extends Controller
     {
 
         $news = DB::table('news')
-            ->select(['id','title','context']);
+            ->select(['id','title','context','image']);
 
         $datatables =  app('datatables')->of($news);
 
 
         return $datatables
+            ->editColumn('context', function($news) {
+                return "<h2>".$news->title."</h2><br/>".$news->context;
+            })
+            ->editColumn('image', function($news) {
+                ob_start();
+                ?>
+
+                <div class="file-preview-thumbnails">
+                    <div class="file-live-thumbs">
+                        <div class="file-preview-frame" id="<?php echo "preview-".$news->id."-".$news->id ?>" data-fileindex="<?php echo $news->id ?>"
+                             data-template="image">
+                            <div class="kv-file-content">
+                                <img src="<?php echo $news->image ?>" class="kv-preview-data file-preview-image"
+                                     title="user_man_2.svg" alt="user_man_2.svg"
+                                     style="width:auto;height:160px;">
+                            </div>
+                            <div class="file-thumbnail-footer">
+                                <div class="file-footer-caption" title="user_man_2.svg"><?php echo $news->image ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <?php
+                $html = ob_get_clean();
+                return $html;
+            })
             ->addColumn('action', function ($news) {
                 return  '<a href="'.route('admin.news.edit',$news->id).'" class="btn btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="'.trans('buttons.general.crud.edit').'"></i> </a>'.
                 ' <button class="btn btn-xs btn-danger btn-delete" data-remote="'.route('admin.news.destroy', $news->id) .'"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="' . trans('buttons.general.crud.delete') . '"></i></button>';

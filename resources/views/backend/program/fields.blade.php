@@ -15,7 +15,18 @@
             <div class="form-group">
                 {!! Form::label('syllabus', trans('labels.backend.program.fields.syllabus'), ['class' => 'col-lg-3 control-label']) !!}
                 <div class="col-lg-9">
-                    {!! Form::file('syllabus', ['class' => 'form-control']) !!}
+                    <div class="form-group" style="margin: 0px;">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <a id="lfm" data-input="syllabus" data-preview="holder" class="btn btn-primary">
+                                    <i class="fa fa-picture-o"></i> Choose
+                                </a>
+                            </span>
+                            <input id="syllabus" class="form-control" type="text" name="syllabus" >
+                        </div>
+                    </div>
+
+                    <img id="holder" style="margin-top:15px;max-height:100px;" onError="this.onerror=null;this.src='{{url("img/sample_file.png")}}';">
                 </div>
             </div>
 

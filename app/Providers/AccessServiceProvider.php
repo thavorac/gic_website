@@ -176,6 +176,10 @@ class AccessServiceProvider extends ServiceProvider
             \App\Repositories\Backend\UsefulLink\UsefulLinkRepositoryContract::class,
             \App\Repositories\Backend\UsefulLink\EloquentUsefulLinkRepository::class
         );
+        $this->app->bind(
+            \App\Repositories\Backend\Slideshow\SlideshowRepositoryContract::class,
+            \App\Repositories\Backend\Slideshow\EloquentSlideshowRepository::class
+        );
     }
 
     /**

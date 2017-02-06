@@ -6,3 +6,7 @@ $('.year').datetimepicker({
     format: 'YYYY',
     viewMode:'years'
 });
+
+$(".timepicker").timepicker({
+    showInputs:false
+});
