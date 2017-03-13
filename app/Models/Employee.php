@@ -1,6 +1,7 @@
 <?php namespace App\Models;
 
 use App\Models\Access\User\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -29,6 +30,9 @@ class Employee extends Model {
         'start_working_date',
         'stop_working_date',
         'cv',
+        'address',
+        'phone',
+        'email',
         'about_me',
         'interest',
         'create_uid',
@@ -36,6 +40,17 @@ class Employee extends Model {
         'created_at',
         'updated_at'
     ];
+
+    public function setDobAttribute($value)
+    {
+        $dob = Carbon::createFromFormat("d/m/Y",$value);
+        $this->attributes['dob'] = $dob->format("m/d/Y");
+    }
+    public function getDobAttribute($value)
+    {
+        $dob = Carbon::createFromFormat("m/d/Y",$value);
+        return $dob;
+    }
 
     public function creator(){
         return $this->belongsTo(User::class,'create_uid');

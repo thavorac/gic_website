@@ -32,6 +32,7 @@ class Student extends Model {
         'id_card',
         'address',
         'description',
+        'promotion',
         'about',
         'department_id',
         'create_uid',

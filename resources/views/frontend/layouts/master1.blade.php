@@ -70,8 +70,8 @@
                                 <li class="active">
                                     <a href="#">English </a>
                                 </li>
-                                <li><a href="#">Khmer</a></li>
-                                <li><a href="#">French</a></li>
+                                <li><a href="#">ខ្មែរ</a></li>
+                                <li><a href="#">Français</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -97,51 +97,51 @@
                                     <!-- Collect the nav links, forms, and other content for toggling -->
                                     <div class="collapse navbar-collapse" id="main-nav">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="active"><a href="index.html">Home</a></li>
+                                            <li class="active"><a href="{{route("frontend.index")}}">Home</a></li>
                                             <li class="dropdown list-inline">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academic</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="about.html">About College</a></li>
-                                                    <li><a href="about.html">Courses</a></li>
+                                                    <li><a href="{{route("frontend.academic.about")}}">About College</a></li>
+                                                    <li><a href="{{route("frontend.academic.list_courses")}}">Courses</a></li>
                                                     <li class="dropdown">
                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Timetables</a>
                                                         <ul class="dropdown-menu">
-                                                            <li><a href="buying-steps.html">2016-2017</a></li>
-                                                            <li><a href="buying-confirmation.html">2015-2016</a></li>
+                                                            <li><a href="{{route("frontend.academic.time_table",2017)}}">2016-2017</a></li>
+                                                            <li><a href="{{route("frontend.academic.time_table",2016)}}">2015-2016</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="about.html">Students</a></li>
-                                                    <li><a href="about.html">Scholarships</a></li>
-                                                    <li><a href="about.html">Scholarship Winners</a></li>
-                                                    <li><a href="about.html">Programs</a></li>
-                                                    <li><a href="about.html">Missions</a></li>
+                                                    <li><a href="{{route("frontend.academic.list_students",'latest')}}">Students</a></li>
+                                                    <li><a href="{{route("frontend.academic.list_scholarships")}}">Scholarships</a></li>
+                                                    <li><a href="{{route("frontend.academic.list_scholarship_winners")}}">Scholarship Winners</a></li>
+                                                    <li><a href="{{route("frontend.academic.list_programs")}}">Programs</a></li>
+                                                    <li><a href="{{route("frontend.academic.list_missions")}}">Missions</a></li>
 
                                                 </ul>
                                             </li>
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research/Development</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="coming-soon-dark.html" target="_blank">Projects</a></li>
-                                                    <li><a href="coming-soon-dark.html" target="_blank">Partners</a></li>
+                                                    <li><a href="{{route("frontend.research_development.list_projects")}}" target="_blank">Projects</a></li>
+                                                    <li><a href="{{route("frontend.research_development.list_partners")}}" target="_blank">Partners</a></li>
                                                 </ul>
                                             </li>
 
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">News/Events</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="events-3col.html">News</a></li>
-                                                    <li><a href="events-right-sidebar.html">Events</a></li>
-                                                    <li><a href="events-left-sidebar.html">Student's Message</a></li>
-                                                    <li><a href="single-events.html">Blog</a></li>
+                                                    <li><a href="{{route("frontend.list_news")}}">News</a></li>
+                                                    <li><a href="{{route("frontend.list_events")}}">Events</a></li>
+                                                    <li><a href="{{route("frontend.list_student_messages")}}">Student's Message</a></li>
+                                                    <li><a href="{{route("frontend.list_blogs")}}">Blog</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staffs & Other</a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="events-3col.html">Staffs</a></li>
-                                                    <li><a href="events-right-sidebar.html">Useful Links</a></li>
-                                                    <li><a href="events-left-sidebar.html">Gallery</a></li>
-                                                    <li><a href="single-events.html">Our Rooms/Labs</a></li>
+                                                    <li><a href="{{route("frontend.list_staffs")}}">Staffs</a></li>
+                                                    <li><a href="{{route("frontend.useful_links")}}">Useful Links</a></li>
+                                                    <li><a href="{{route("frontend.gallery")}}">Gallery</a></li>
+                                                    <li><a href="{{route("frontend.room_labs")}}">Our Rooms/Labs</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

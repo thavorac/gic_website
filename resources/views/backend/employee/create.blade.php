@@ -9,6 +9,7 @@
     </h1>
 @endsection
 @section('after-styles-end')
+    {!! Html::style('plugins/timepicker/css/bootstrap-timepicker.min.css') !!}
     {!! Html::style('plugins/datetimepicker/bootstrap-datetimepicker.min.css') !!}
     <style>
         .box-body {
@@ -44,10 +45,13 @@
     {!! Html::script('plugins/datatables/dataTables.bootstrap.min.js') !!}
     {!! Html::script('plugins/tinymce/tinymce.min.js') !!}
     {!! Html::script('plugins/moment/moment.min.js') !!}
+    {!! Html::script('plugins/timepicker/js/bootstrap-timepicker.min.js') !!}
     {!! Html::script('plugins/datetimepicker/bootstrap-datetimepicker.min.js') !!}
+    {!! Html::script('vendor/laravel-filemanager/js/lfm.js') !!}
     <script>
         tinymce_height = 600;
         $(function() {
+            $('.lfm').filemanager('file');
         });
     </script>
     {!! Html::script('js/backend/init-tinymce.js') !!}

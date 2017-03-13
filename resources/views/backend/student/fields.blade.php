@@ -6,12 +6,19 @@
     <div class="tab-content">
         <div class="tab-pane active" id="tab_1-1">
             <div class="form-group">
-                {!! Form::label('name_kh', trans('labels.backend.student.fields.name'), ['class' => 'col-lg-3 control-label']) !!}
+                {!! Form::label('name_kh', trans('labels.backend.student.fields.name'), ['class' => 'col-lg-3 control-label required']) !!}
                 <div class="col-lg-4">
-                    {!! Form::text('name_kh', null, ['class' => 'form-control','placeholder' => trans('labels.backend.student.fields.name_kh')]) !!}
+                    {!! Form::text('name_kh', null, ['class' => 'form-control', 'required'=>'required','placeholder' => trans('labels.backend.student.fields.name_kh')]) !!}
                 </div>
                 <div class="col-lg-5">
-                    {!! Form::text('name_latin', null, ['class' => 'form-control', 'placeholder' => trans('labels.backend.student.fields.name_latin')]) !!}
+                    {!! Form::text('name_latin', null, ['class' => 'form-control', 'required'=>'required', 'placeholder' => trans('labels.backend.student.fields.name_latin')]) !!}
+                </div>
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('promotion', trans('labels.backend.student.fields.promotion'), ['class' => 'col-lg-3 control-label']) !!}
+                <div class="col-lg-3">
+                    {!! Form::number('promotion', null, ['class' => 'form-control', 'required' => 'required']) !!}
                 </div>
             </div>
 

@@ -79,11 +79,54 @@ class DepartmentController extends Controller
 
 
         return $datatables
-            ->addColumn('name', function ($data) {
-                return "<p>".$data->name_kh."</p><p>".$data->name_en."</p><p>".$data->name_fr."</p><p>".$data->code."</p>";
+            ->addColumn('info', function ($data) {
+                ob_start();
+                ?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <b><?php echo $data->name_kh ?></b>
+                        <br/>
+                        <em><?php echo $data->name_en ?></em>
+                        <br/>
+                        <em><?php echo $data->name_fr ?></em>
+                        <h4>Headline</h4>
+                        <abbr><?php echo $data->headline ?></abbr>
+                        <hr/>
+                        <p>
+                            <?php echo $data->address ?>
+                        </p>
+                        <div class="features">
+                            <ul class="empty">
+                                <li><i class="fa fa-phone-square"></i> <?php echo $data->phone ?></li>
+                                <li><i class="fa fa-envelope-square"></i> <?php echo $data->email ?></li>
+                                <li><i class="fa fa-facebook-official"></i> <?php echo $data->facebook ?></li>
+                                <li><i class="fa fa-youtube-square"></i> <?php echo $data->youtube ?></li>
+                                <li><i class="fa fa-google-plus-square"></i> <?php echo $data->gplus ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                $html = ob_get_clean();
+                return $html;
+                //return "<p>".$data->name_kh."</p><p>".$data->name_en."</p><p>".$data->name_fr."</p><p>".$data->code."</p>";
             })
-            ->addColumn('contact', function ($data) {
-                return "<i class='fa fa-phone'></i>".$data->phone."<br/><i class='fa fa-internet-explorer'></i> ".$data->email."<br/><i class='fa fa-facebook-square'></i>".$data->facebook.$data->gplus.$data->twitter.$data->youtube;
+            ->editColumn('mission', function($data) {
+                ob_start();
+                ?>
+                <b>Mission</b>
+                <p><?php echo $data->mission ?></p>
+                <b>Vision</b>
+                <p>
+                    <?php echo $data->vision ?>
+                </p>
+                <b>About Department</b>
+                <p>
+                    <?php echo $data->about_dept ?>
+                </p>
+                <?php
+                $html = ob_get_clean();
+                return $html;
             })
             ->addColumn('action', function ($data) {
                 return

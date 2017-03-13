@@ -75,6 +75,7 @@ class StudentController extends Controller
                 'students.photo','students.dob','students.personal_phone',
                 'students.parent_phone','students.email','students.id_card',
                 'students.address','students.description','students.about',
+                'students.promotion',
                 'departments.name_kh as department'
             ]);
 
@@ -97,7 +98,7 @@ class StudentController extends Controller
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <?php echo $student->id_card ?>
+                                Promotion <?php echo $student->promotion ?>/ <?php echo $student->id_card ?>
                             </div>
                         </div>
                         <div class="row">

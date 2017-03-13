@@ -1,6 +1,6 @@
 @extends ('backend.layouts.master')
 
-@section ('title', trans('labels.backend.department.title.main'))
+@section ('title', "GIC | ".trans('labels.backend.department.title.main'))
 
 @section('page-header')
     <h1>
@@ -12,6 +12,12 @@
 
 @section('after-styles-end')
     {!! Html::style('plugins/datatables/dataTables.bootstrap.css') !!}
+    <style>
+        ul.empty {
+            padding: 0;
+            list-style-type: none;
+        }
+    </style>
 @stop
 
 @section('content')
@@ -30,12 +36,9 @@
                 <table class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%" id="data-table">
                     <thead>
                     <tr>
-                        <th>{{ trans('labels.general.id') }}</th>
-                        <th>{{ trans('labels.backend.department.fields.name') }}</th>
-                        <th>{{ trans('labels.backend.department.fields.contact') }}</th>
-                        <th>{{ trans('labels.backend.department.fields.address') }}</th>
-                        <th>{{ trans('labels.backend.department.fields.vision') }}</th>
-                        <th>{{ trans('labels.general.actions') }}</th>
+                        <th width="200px">{{ trans('labels.backend.department.fields.name') }}</th>
+                        <th>{{ trans('labels.backend.department.fields.mission') }} & {{ trans('labels.backend.department.fields.vision') }}</th>
+                        <th width="50px">{{ trans('labels.general.actions') }}</th>
                     </tr>
                     </thead>
                 </table>
@@ -61,11 +64,8 @@
                     method: 'POST'
                 },
                 columns: [
-                    { data: 'id', name: 'id'},
-                    { data: 'name', name: 'name'},
-                    { data: 'contact', name: 'contact',orderable: false, searchable: false},
-                    { data: 'address', name: 'address',orderable: false, searchable: false},
-                    { data: 'vision', name: 'vision',orderable: false, searchable: false},
+                    { data: 'info', name: 'name_kh', },
+                    { data: 'mission', name: 'mission',orderable: false, searchable: false},
                     { data: 'action', name: 'action',orderable: false, searchable: false}
                 ]
             });

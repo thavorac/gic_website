@@ -16,12 +16,7 @@
         <!-- Styles -->
         @yield('before-styles-end')
 
-        {{ Html::style(elixir('css/frontend.css')) }}
-
-        <!-- Check if the language is set to RTL, so apply the RTL layouts -->
-        @langRTL
-            {!! Html::style(elixir('css/rtl.css')) !!}
-        @endif
+        {{ Html::style('css/frontend/login.css') }}
 
         @yield('after-styles-end')
 

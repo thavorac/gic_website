@@ -26,6 +26,7 @@ class CreateTableStudents extends Migration
             $table->string('address');
             $table->string('description')->nullable();
             $table->text('about')->nullable();
+            $table->integer('promotion')->nullable();
             $table->timestamps();
 
             $table->integer('department_id')->unsigned()->index();

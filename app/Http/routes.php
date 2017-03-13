@@ -15,6 +15,10 @@ Route::group(['middleware' => 'web'], function() {
     Route::group(['namespace' => 'Frontend'], function () {
         require (__DIR__ . '/Routes/Frontend/Frontend.php');
         require (__DIR__ . '/Routes/Frontend/Access.php');
+        require (__DIR__ . '/Routes/Frontend/Academic.php');
+        require (__DIR__ . '/Routes/Frontend/NewsEvent.php');
+        require (__DIR__ . '/Routes/Frontend/ResearchDevelopment.php');
+        require (__DIR__ . '/Routes/Frontend/StaffOther.php');
     });
 });
 

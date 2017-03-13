@@ -1,6 +1,6 @@
 @extends ('backend.layouts.master')
 
-@section ('title', trans('labels.backend.academic_year.title.main'))
+@section ('title', "GIC | ".trans('labels.backend.academic_year.title.main'))
 
 @section('page-header')
     <h1>

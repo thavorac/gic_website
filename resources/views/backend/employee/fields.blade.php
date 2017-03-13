@@ -18,13 +18,38 @@
                     {!! Form::text('name_latin', null, ['class' => 'form-control']) !!}
                 </div>
             </div>
-
             <div class="form-group">
-                {!! Form::label('photo', trans('labels.backend.employee.fields.photo'), ['class' => 'col-lg-3 control-label']) !!}
-                <div class="col-lg-9">
-                    {!! Form::file('photo', ['class' => 'form-control']) !!}
+                {!! Form::label('phone', trans('labels.backend.department.fields.phone_email'), ['class' => 'col-lg-3 control-label']) !!}
+                <div class="col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        {!! Form::text('email', null, ['class' => 'form-control']) !!}
+                    </div>
                 </div>
             </div>
+            <div class="form-group">
+                {!! Form::label('photo', trans('labels.backend.employee.fields.photo'), ['class' => 'col-lg-3 control-label']) !!}
+                <div class=" col-lg-9">
+                    <div class="input-group">
+                    <span class="input-group-btn">
+                        <a data-input="photo" data-preview="holder" class="lfm btn btn-primary">
+                            <i class="fa fa-picture-o"></i> Choose
+                        </a>
+                    </span>
+                        <input id="photo" class="form-control" type="text" name="photo">
+                    </div>
+                    <img id="holder" style="margin-top:15px;max-height:100px;">
+                </div>
+            </div>
+
+
+
             <div class="form-group">
                 {!! Form::label('dob', trans('labels.backend.employee.fields.dob'), ['class' => 'col-lg-3 control-label']) !!}
                 <div class="col-lg-9">
@@ -45,8 +70,22 @@
             </div>
             <div class="form-group">
                 {!! Form::label('cv', trans('labels.backend.employee.fields.cv'), ['class' => 'col-lg-3 control-label']) !!}
+                <div class=" col-lg-9">
+                    <div class="input-group">
+                    <span class="input-group-btn">
+                        <a data-input="cv" data-preview="holder" class="btn btn-primary lfm">
+                            <i class="fa fa-picture-o"></i> Choose
+                        </a>
+                    </span>
+                        <input id="cv" class="form-control" type="text" name="cv">
+                    </div>
+                    <img id="holder" style="margin-top:15px;max-height:100px;">
+                </div>
+            </div>
+            <div class="form-group">
+                {!! Form::label('address', trans('labels.backend.department.fields.address'), ['class' => 'col-lg-3 control-label']) !!}
                 <div class="col-lg-9">
-                    {!! Form::file('cv', ['class' => 'form-control']) !!}
+                    {!! Form::textarea('address', null, ['class' => 'form-control','rows'=>3]) !!}
                 </div>
             </div>
         </div>

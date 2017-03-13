@@ -17,6 +17,9 @@ class CreateTableEmployees extends Migration
             $table->increments('id');
             $table->string('name_kh');
             $table->string('name_latin');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email');
             $table->string('photo')->nullable();
             $table->date('dob')->nullable();
             $table->integer('start_working_date')->nullable();

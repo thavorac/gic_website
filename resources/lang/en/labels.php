@@ -464,7 +464,8 @@ return [
                 'address' => "Address",
                 'description' => 'Description',
                 'about' => 'About',
-                'department_id' => "Department"
+                'department_id' => "Department",
+                'promotion' => "Promotion"
             ]
         ],
         'timetable' => [
