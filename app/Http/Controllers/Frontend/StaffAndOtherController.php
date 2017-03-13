@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Department;
+use App\Models\Employee;
 use App\Models\SlideShow;
 
 /**
@@ -27,7 +28,9 @@ class StaffAndOtherController extends Controller
     public function staff($id)
     {
         $department = Department::where('code','GIC')->first();
-        return view('frontend.staffs_other.staffs.staff',compact('department'));
+        $employee = Employee::find($id);
+
+        return view('frontend.staffs_other.staffs.staff',compact('department','employee'));
     }
 
     /**

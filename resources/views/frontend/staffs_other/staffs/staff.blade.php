@@ -43,7 +43,6 @@
             box-sizing: border-box;
             color: #fff;
             height: 140px;
-            width: 140px;
         }
         .twPc-divUser {
             margin: 20px 0 0;
@@ -108,24 +107,22 @@
 
                     <div>
                         <div class="twPc-button">
-                            <!-- Twitter Button | you can get from: https://about.twitter.com/tr/resources/buttons#follow -->
-                            <a href="https://twitter.com/mertskaplan" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @mertskaplan</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                            <!-- Twitter Button -->
+                            <a href="#" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @mertskaplan</a>
+
                         </div>
 
                         <a title="Mert Salih Kaplan" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
-                            <img alt="Mert Salih Kaplan" src="https://pbs.twimg.com/profile_images/378800000352678934/34f9e192635975bf42e534434e2b6273_bigger.jpeg" class="twPc-avatarImg">
+                            <img alt="{{$employee->name_kh}}" src="{{$employee->photo}}" class="twPc-avatarImg">
                         </a>
 
                         <div class="twPc-divUser">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="twPc-divName">
-                                        <a href="https://twitter.com/mertskaplan">Mert S. Kaplan</a>
+                                        <a href="https://twitter.com/mertskaplan">{{$employee->name_kh}}</a>
                                     </div>
                                 <span>
-                                    <a href="https://twitter.com/mertskaplan">@<span>mertskaplan</span></a>
+                                    <a href="https://twitter.com/mertskaplan"><span>{{$employee->name_en}}</span></a>
                                 </span>
                                 </div>
                                 <div class="col-md-8">
@@ -161,39 +158,19 @@
 
                                 <div class="tab_menu">
                                     <ul>
-                                        <li class="active"><a href="#explore_program" data-toggle="tab">Explore This Program</a></li>
-                                        <li><a href="#what_learn" data-toggle="tab">What you’llearn</a></li>
-                                        <li><a href="#cost" data-toggle="tab">What it costs</a></li>
-                                        <li><a href="#admission_requirements" data-toggle="tab">Admission Requirements</a></li>
+                                        <li class="active"><a href="#explore_program" data-toggle="tab">About me</a></li>
+                                        <li><a href="#what_learn" data-toggle="tab">Publications</a></li>
+                                        <li><a href="#cost" data-toggle="tab">Projects</a></li>
+                                        <li><a href="#admission_requirements" data-toggle="tab">Academic</a></li>
                                     </ul>
                                 </div><!--end tab_menu-->
                                 <div class="tab-content single_tab_content">
                                     <div role="tabpanel" class="tab-pane active" id="explore_program">
-                                        <h1>Welcome To Royal College</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
-                                        <div class="admission_video">
-                                            <img src="img/courses/video.jpg" data-video="https://www.youtube.com/embed/oOMcZoeEK0A?autoplay=1">
-                                        </div>
-                                        <h1>Welcome To COLÉGIO PRELÚDIO</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
-                                        <h1>Welcome To COLÉGIO PRELÚDIO</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-6">
-                                                <div class="left_half">
-                                                    <h1>Welcome To COLÉGIO RELÚDIO</h1>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 pull-right">
-                                                <div class="right_half">
-                                                    <h1>Welcome To COLÉGIO RELÚDIO</h1>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, </p>
-                                                </div>
-                                            </div>
-                                        </div><!--end row-->
-                                        <h1>Welcome To COLÉGIO PRELÚDIO</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+                                        <h1>Interest</h1>
+                                        {!! $employee->interest !!}
+
+                                        <h1>About me</h1>
+                                        {!! $employee->about_me !!}
                                     </div><!--end tab-pane-->
                                     <div role="tabpanel" class="tab-pane" id="what_learn">
                                         <h1>Title goes here</h1>
