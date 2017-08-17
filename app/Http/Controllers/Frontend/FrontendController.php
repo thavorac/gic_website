@@ -23,6 +23,15 @@ class FrontendController extends Controller
 
         return view('frontend.under_construction');
     }
+    public function homepage(){
+        return view('frontend.beta.homepage.index');
+    }
+    public function event_list(){
+
+    }
+    public function event_detail(){
+
+    }
 
     /**
      * @return \Illuminate\View\View

@@ -179,7 +179,10 @@ return [
                 'stop_working_date' => 'Stop working on',
                 'cv' => 'CV',
                 'about_me' => 'About me',
-                'interest' => 'Interest'
+                'interest' => 'Interest',
+                'publication' => 'Publication',
+                'project' => 'Project',
+                'academic' => 'Academic'
             ]
         ],
         'event' => [

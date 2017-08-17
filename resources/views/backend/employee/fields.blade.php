@@ -1,8 +1,10 @@
 <div class="nav-tabs-custom">
     <ul class="nav nav-tabs">
         <li class="active"><a href="#tab_1-1" data-toggle="tab">General Information</a></li>
-        <li><a href="#interest" data-toggle="tab">{{trans('labels.backend.employee.fields.interest')}}</a></li>
         <li><a href="#about_me" data-toggle="tab">{{trans('labels.backend.employee.fields.about_me')}}</a></li>
+        <li><a href="#publication" data-toggle="tab">{{trans('labels.backend.employee.fields.publication')}}</a></li>
+        <li><a href="#project" data-toggle="tab">{{trans('labels.backend.employee.fields.project')}}</a></li>
+        <li><a href="#academic" data-toggle="tab">{{trans('labels.backend.employee.fields.academic')}}</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="tab_1-1">
@@ -89,11 +91,17 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane" id="interest">
-            {!! Form::textarea('interest', null, ['class' => 'form-control tinymce']) !!}
-        </div>
         <div class="tab-pane" id="about_me">
             {!! Form::textarea('about_me', null, ['class' => 'form-control tinymce']) !!}
+        </div>
+        <div class="tab-pane" id="publication">
+            {!! Form::textarea('publication', null, ['class' => 'form-control tinymce']) !!}
+        </div>
+        <div class="tab-pane" id="project">
+            {!! Form::textarea('project', null, ['class' => 'form-control tinymce']) !!}
+        </div>
+        <div class="tab-pane" id="academic">
+            {!! Form::textarea('academic', null, ['class' => 'form-control tinymce']) !!}
         </div>
     </div>
 </div>

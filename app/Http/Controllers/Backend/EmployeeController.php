@@ -89,7 +89,10 @@ class EmployeeController extends Controller
                 'email',
                 'cv',
                 'about_me',
-                'interest']);
+                'publication',
+                'project',
+                'academic'
+            ]);
 
         $datatables =  app('datatables')->of($employees);
 
@@ -108,7 +111,11 @@ class EmployeeController extends Controller
                             <div class="media-body update-card-body">
                                 <h4 class="media-heading"><?php echo $employee->name_kh ?></h4>
                                 <p><?php echo $employee->name_latin ?></p>
-                                <p><?php echo $employee->address ?></p>
+                                <p>
+                                    <span><i class="fa fa-phone-square"></i> <?php echo $employee->phone ?></span><br/>
+                                    <span><i class="fa fa-envelope-square"></i> <?php echo $employee->email ?></span><br/>
+                                    <span><i class="fa fa-map"></i> <?php echo $employee->address ?></span>
+                                </p>
                             </div>
                         </div>
 
@@ -116,9 +123,17 @@ class EmployeeController extends Controller
                             <div class="h-status">
                             </div>
                             <div class="update-card-body">
-                                <h4>Vinothbabu K</h4>
-                                <p>This is me. I am a Good Boy.This is the body content of this media.This can be
-                                    used as an update panel.</p>
+                                <h4>About Me</h4>
+                                <blockquote><p><?php echo $employee->about_me ?></p></blockquote>
+
+                                <h4>Publication</h4>
+                                <blockquote><p><?php echo $employee->publication ?></p></blockquote>
+
+                                <h4>Project</h4>
+                                <blockquote><p><?php echo $employee->project ?></p></blockquote>
+
+                                <h4>Academic</h4>
+                                <blockquote><p><?php echo $employee->academic ?></p></blockquote>
                             </div>
                             <div class="card-action-pellet btn-toolbar pull-right" role="toolbar">
 

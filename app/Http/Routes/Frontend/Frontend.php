@@ -5,6 +5,17 @@
  */
 
 Route::get('/', 'FrontendController@index')->name('frontend.index');
+Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
+Route::get('event/list', 'FrontendController@event_list')->name('frontend.event.list');
+Route::get('event/detail', 'FrontendController@event_detail')->name('frontend.event.detail');
+
+
+
+
+
+
+
+
 Route::get('macros', 'FrontendController@macros')->name('frontend.macros');
 
 /**
