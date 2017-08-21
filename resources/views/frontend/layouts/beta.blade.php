@@ -14,7 +14,9 @@
     @yield('meta')
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/bootstrap/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="css/frontend/bootstrap/css/bootstrap.min.css">
+
     @yield('before-styles')
 
     {{ Html::style(elixir('css/frontend.css')) }}

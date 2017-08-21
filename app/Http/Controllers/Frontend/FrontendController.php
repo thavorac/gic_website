@@ -23,6 +23,20 @@ class FrontendController extends Controller
 
         return view('frontend.under_construction');
     }
+
+    public function mission_main(){
+
+        return view("frontend.beta.mission.main");
+    }
+
+
+    public function mission_detail(){
+
+        return view("frontend.beta.mission.detail");
+
+    }
+
+
     public function homepage(){
         return view('frontend.beta.homepage.index');
     }
