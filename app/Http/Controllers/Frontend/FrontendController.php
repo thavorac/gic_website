@@ -54,6 +54,32 @@ class FrontendController extends Controller
     public function Student_List_I4(){
         return view('frontend.beta.Student_List.Student_List_I4');
     }
+    public function staff_detial_activite(){
+        return view('frontend.beta.staff_Detial.activite');
+    }
+    public function staff_detial_course(){
+        return view('frontend.beta.staff_Detial.course');
+    }
+    public function staff_detial_introduct()
+    {
+        return view('frontend.beta.staff_Detial.introduct');
+    }
+    public function staff_detial_publications()
+    {
+        return view('frontend.beta.staff_Detial.publications');
+    }
+    public function staff_detial_presentation()
+    {
+        return view('frontend.beta.staff_Detial.presentation');
+    }
+    public function staff_detial_project_to_research()
+    {
+        return view('frontend.beta.staff_Detial.project_to_research');
+    }
+    public function department()
+    {
+        return view('frontend.beta.department.department');
+    }
 
     public function scholarship(){
         return view('frontend.beta.scholarship.scholarship_link');

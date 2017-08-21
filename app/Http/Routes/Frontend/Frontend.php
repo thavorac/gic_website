@@ -1,14 +1,11 @@
 <?php
 
-/**
- * Frontend Controllers
- */
-
 Route::get('/', 'FrontendController@index')->name('frontend.index');
 
 
 Route::get('List/I3', 'FrontendController@Student_List_I3')->name('frontend.Student_List_I3');
 Route::get('List/I4', 'FrontendController@Student_List_I4')->name('frontend.Student_List_I4');
+<<<<<<< HEAD
 
 
 Route::get('mission-main', 'FrontendController@mission_main')->name('frontend.mission.main');
@@ -29,6 +26,18 @@ Route::get('partner_link3', 'FrontendController@partner_link3')->name('frontend.
 Route::get('partner_link4', 'FrontendController@partner_link4')->name('frontend.partner_link4');
 
 
+=======
+Route::get('event/list', 'FrontendController@event_list')->name('frontend.event.list');
+Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
+Route::get('event/detail', 'FrontendController@event_detail')->name('frontend.event.detail');
+Route::get('staff_detial-introduct', 'FrontendController@staff_detial_introduct')->name('frontend.staff_detial-introduct');
+Route::get('staff_detial-presentation', 'FrontendController@staff_detial_presentation')->name('frontend.staff_detial-presentation');
+Route::get('staff_detial-project_to_research', 'FrontendController@staff_detial_project_to_research')->name('frontend.staff_detial-project_to_research');
+Route::get('staff_detial-publications', 'FrontendController@staff_detial_publications')->name('frontend.staff_detial-publications');
+Route::get('staff_detial-activite', 'FrontendController@staff_detial_activite')->name('frontend.staff_detial-activite');
+Route::get('staff_detial-course', 'FrontendController@staff_detial_course')->name('frontend.staff_detial-course');
+Route::get('department', 'FrontendController@department')->name('frontend.department');
+>>>>>>> [TASK] Commit message.
 
 Route::get('macros', 'FrontendController@macros')->name('frontend.macros');
 
