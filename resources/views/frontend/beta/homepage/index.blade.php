@@ -1,6 +1,6 @@
 @extends('frontend.layouts.beta')
 @section('after-styles')
-    <link rel="stylesheet" type="text/css" href="css/frontend/homepage/home-page-body.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/frontend/homepage/home-page-body.css')}}">
 @endsection
 @section('content')
     <div class="row">

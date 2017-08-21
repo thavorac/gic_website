@@ -5,7 +5,8 @@
  */
 
 Route::get('/', 'FrontendController@index')->name('frontend.index');
-Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
+Route::get('List/I3', 'FrontendController@Student_List_I3')->name('frontend.Student_List_I3');
+Route::get('List/I4', 'FrontendController@Student_List_I4')->name('frontend.Student_List_I4');
 Route::get('event/list', 'FrontendController@event_list')->name('frontend.event.list');
 Route::get('event/detail', 'FrontendController@event_detail')->name('frontend.event.detail');
 

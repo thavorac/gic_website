@@ -32,6 +32,14 @@ class FrontendController extends Controller
     public function event_detail(){
 
     }
+    public function Student_List_I3(){
+        return view('frontend.beta.Student_List.Student_List_I3');
+    }
+
+    public function Student_List_I4(){
+        return view('frontend.beta.Student_List.Student_List_I4');
+    }
+
 
     /**
      * @return \Illuminate\View\View

@@ -14,7 +14,7 @@
     @yield('meta')
 
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="css/frontend/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/bootstrap/bootstrap.min.css') }}">
     @yield('before-styles')
 
     {{ Html::style(elixir('css/frontend.css')) }}
@@ -43,8 +43,8 @@
 <!-- Scripts -->
 @yield('before-scripts')
 {!! Html::script(elixir('js/frontend.js')) !!}
-<script type="text/javascript" src="js/frontend/jquery.min.js"></script>
-<script type="text/javascript" src="js/frontend/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{asset('js/frontend/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/frontend/bootstrap/bootstrap.min.js')}}"></script>
 @yield('after-scripts')
 
 @include('includes.partials.ga')
