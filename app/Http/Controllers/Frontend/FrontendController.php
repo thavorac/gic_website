@@ -46,7 +46,7 @@ class FrontendController extends Controller
     public function event_detail(){
 
     }
-<<<<<<< HEAD
+
     public function Student_List_I3(){
         return view('frontend.beta.Student_List.Student_List_I3');
     }
@@ -55,7 +55,6 @@ class FrontendController extends Controller
         return view('frontend.beta.Student_List.Student_List_I4');
     }
 
-=======
     public function scholarship(){
         return view('frontend.beta.scholarship.scholarship_link');
     }
@@ -74,7 +73,7 @@ class FrontendController extends Controller
     public function partner_link4(){
         return view('frontend.beta.partnership.partner_link4');
     }
->>>>>>> updating partnership
+
 
     /**
      * @return \Illuminate\View\View
