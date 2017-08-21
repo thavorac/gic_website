@@ -1,6 +1,7 @@
 @extends('frontend.layouts.beta')
 @section('after-styles')
-    <link rel="stylesheet" type="text/css" href="css/frontend/department/Department.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/department/Department.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/frontend/department/pixel-metro.css') }}">
 @endsection
 @section('content')
     <div class="row">
@@ -17,14 +18,22 @@
                         <div style="list-style-type: none">
                             <div class="collapse navbar-collapse" id="myNavbar">
                                 <div>
-                                    <span class="title">Department GIC</span><hr>
-                                    <a href="#vision"><span class="title-sidebar">Vision</span></a><hr>
-                                    <a href="#goal"><span class="title-sidebar">Goal</span></a><hr>
-                                    <a href="#mission"><span class="title-sidebar">Mission statement</span></a><hr>
-                                    <a href="#administration"><span class="title-sidebar">Administration</span></a><hr>
-                                    <a href="#visit-gic"><span class="title-sidebar">Visit GIC</span></a><hr>
-                                    <a href="#location"><span class="title-sidebar">Location</span></a><hr>
-                                    <a href="#history"><span class="title-sidebar">History</span></a><hr>
+                                    <span class="title">Department GIC</span>
+                                    <hr>
+                                    <a href="#vision"><span class="title-sidebar">Vision</span></a>
+                                    <hr>
+                                    <a href="#goal"><span class="title-sidebar">Goal</span></a>
+                                    <hr>
+                                    <a href="#mission"><span class="title-sidebar">Mission statement</span></a>
+                                    <hr>
+                                    <a href="#administration"><span class="title-sidebar">Administration</span></a>
+                                    <hr>
+                                    <a href="#visit-gic"><span class="title-sidebar">Visit GIC</span></a>
+                                    <hr>
+                                    <a href="#location"><span class="title-sidebar">Location</span></a>
+                                    <hr>
+                                    <a href="#history"><span class="title-sidebar">History</span></a>
+                                    <hr>
                                     <a href="#achievement"><span class="title-sidebar">Achievement</span></a>
                                 </div>
                             </div>
@@ -36,122 +45,140 @@
         <div class="col-md-9">
             <div class="row border-left">
                 <div class="col-md-12">
-                    <span class="title">DESCRIPTION</span><hr>
+                    <span class="title">DESCRIPTION</span>
+                    <hr>
                 </div>
                 <section>
                     <div class="pixel-metro">
                         <div class="content-metro" size-o="normal">
                             <div class="metro-sheet">
-                                <img src="images/album/img01.jpg">
+                                <img src="img/frontend/beta/homepage/img01.jpg">
                             </div>
                             <div class="metro-sheet">
-                                <img src="images/album/img02.jpg">
+                                <img src="img/frontend/beta/homepage/img02.jpg">
                             </div>
                             <div class="metro-sheet">
-                                <img src="images/album/img03.jpg">
-                            </div>
-                        </div>
-                        <div class="content-metro" size-o="wide">
-                            <div class="metro-sheet">
-                                <img src="images/album/img04.jpg">
-                            </div>
-                            <div class="metro-sheet">
-                                <img src="images/album/img05.jpg">
+                                <img src="img/frontend/beta/homepage/img03.jpg">
                             </div>
                         </div>
                         <div class="content-metro" size-o="wide">
                             <div class="metro-sheet">
-                                <img src="images/album/img34.jpg">
+                                <img src="img/frontend/beta/homepage/img04.jpg">
                             </div>
                             <div class="metro-sheet">
-                                <img src="images/album/img35.jpg">
+                                <img src="img/frontend/beta/homepage/img05.jpg">
+                            </div>
+                        </div>
+                        <div class="content-metro" size-o="wide">
+                            <div class="metro-sheet">
+                                <img src="img/frontend/beta/homepage/img34.jpg">
+                            </div>
+                            <div class="metro-sheet">
+                                <img src="img/frontend/beta/homepage/img35.jpg">
                             </div>
                         </div>
                         <div class="content-metro" size-o="small">
                             <div class="metro-sheet">
-                                <img src="images/album/img36.jpg">
+                                <img src="img/frontend/beta/homepage/img36.jpg">
                             </div>
                             <div class="metro-sheet">
-                                <img src="images/album/img37.jpg">
-                            </div>
-                        </div>
-                        <div class="content-metro" size-o="small">
-                            <div class="metro-sheet">
-                                <img src="images/album/img38.jpg">
-                            </div>
-                            <div class="metro-sheet">
-                                <img src="images/album/img39.jpg">
+                                <img src="img/frontend/beta/homepage/img37.jpg">
                             </div>
                         </div>
                         <div class="content-metro" size-o="small">
                             <div class="metro-sheet">
-                                <img src="images/album/img40.jpg">
+                                <img src="img/frontend/beta/homepage/img38.jpg">
                             </div>
                             <div class="metro-sheet">
-                                <img src="images/album/img41.jpg">
+                                <img src="img/frontend/beta/homepage/img39.jpg">
                             </div>
                         </div>
                         <div class="content-metro" size-o="small">
                             <div class="metro-sheet">
-                                <img src="images/album/img42.jpg">
+                                <img src="img/frontend/beta/homepage/img40.jpg">
                             </div>
                             <div class="metro-sheet">
-                                <img src="images/album/img43.jpg">
+                                <img src="img/frontend/beta/homepage/img41.jpg">
+                            </div>
+                        </div>
+                        <div class="content-metro" size-o="small">
+                            <div class="metro-sheet">
+                                <img src="img/frontend/beta/homepage/img42.jpg">
+                            </div>
+                            <div class="metro-sheet">
+                                <img src="img/frontend/beta/homepage/img43.jpg">
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
-                        $(".pixel-metro").pixel_metro({
-                            height: "500px",
-                            bg_metro: "images/dulieu/bg-metro3.jpg",
-                            bg_opacity: 0.55,
-                            metro_rows: 2,
-                        });
-                    </script>
+
                 </section>
                 <div class="col-md-12">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris </p>
                     <div class="vision" id="vision">
                         <div class="border-bottom">
                             <span class="title">VISION</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
                     </div>
                     <div class="goal" id="goal">
                         <div class="border-bottom">
                             <span class="title">GOALS</span>
                         </div>
-                        <p>In order to succeed in transforming the current RUPP into the flagship university of Cambodia, the Mission points are as follows:</p>
+                        <p>In order to succeed in transforming the current RUPP into the flagship university of
+                            Cambodia, the Mission points are as follows:</p>
                         <ul>
-                            <li>Enhance teaching staff and middle-level administrative staff to hold at least master’s degrees with both English and ICT competence.</li>
+                            <li>Enhance teaching staff and middle-level administrative staff to hold at least master’s
+                                degrees with both English and ICT competence.
+                            </li>
                             <li>Be an established center for high-quality research and publications.</li>
                             <li>Increase graduate programs and enhance academic freedom.</li>
                             <li>Increase the number of international students in all types of courses.</li>
-                            <li>Enhance student and faculty exchange with universities in the ASEAN University Network (AUN) and other partner universities,
-                                including services provided to development partners and civil society organizations.</li>
-                            <li>Promote integrity and a sense of belonging and ownership among students, faculty and staff.</li>
+                            <li>Enhance student and faculty exchange with universities in the ASEAN University Network
+                                (AUN) and other partner universities,
+                                including services provided to development partners and civil society organizations.
+                            </li>
+                            <li>Promote integrity and a sense of belonging and ownership among students, faculty and
+                                staff.
+                            </li>
                             <li>Ensure a safe and sound teaching and learning environment.</li>
-                            <li>Provide free information technology (IT) support and internet access to all students and staff.</li>
+                            <li>Provide free information technology (IT) support and internet access to all students and
+                                staff.
+                            </li>
                             <li>Become a resource center for teaching/learning, research and community service.</li>
-                            <li>Mainstream quality assurance and evaluation mechanisms in all departments and programs.</li>
+                            <li>Mainstream quality assurance and evaluation mechanisms in all departments and
+                                programs.
+                            </li>
                         </ul>
                     </div>
                     <div class="mission" id="mission">
                         <div class="border-bottom">
                             <span class="title">MISSION STATEMENT</span>
                         </div>
-                        <p>In order to succeed in transforming the current RUPP into the flagship university of Cambodia, the Mission points are as follows:</p>
+                        <p>In order to succeed in transforming the current RUPP into the flagship university of
+                            Cambodia, the Mission points are as follows:</p>
                         <ul>
-                            <li>Promote integrity and a sense of belonging and ownership among students, faculty and staff.</li>
+                            <li>Promote integrity and a sense of belonging and ownership among students, faculty and
+                                staff.
+                            </li>
                             <li>Ensure a safe and sound teaching and learning environment.</li>
-                            <li>Provide free information technology (IT) support and internet access to all students and staff.</li>
+                            <li>Provide free information technology (IT) support and internet access to all students and
+                                staff.
+                            </li>
                             <li>Become a resource center for teaching/learning, research and community service.</li>
-                            <li>Mainstream quality assurance and evaluation mechanisms in all departments and programs.</li>
+                            <li>Mainstream quality assurance and evaluation mechanisms in all departments and
+                                programs.
+                            </li>
                         </ul>
                     </div>
                     <div class="administration" id="administration">
@@ -160,7 +187,7 @@
                             <hr>
                         </div>
                         <div>
-                            <img src="img\administration.png" alt="">
+                            <img src="img/frontend/beta/homepage/administration.png" alt="">
                             <hr>
                         </div>
                     </div>
@@ -170,23 +197,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="img\6.png" class="img-responsive">
+                                <img src="{{ asset('img/frontend/beta/homepage/6.png') }}" class="img-responsive">
                             </div>
                             <div class="col-md-6">
-                                <img src="img\6.png" alt="" class="img-responsive">
-                            </div>
-                        </div>
-                        <div class="description">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</span>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="img\6.png" class="img-responsive">
-                            </div>
-                            <div class="col-md-6">
-                                <img src="img\6.png" alt="" class="img-responsive">
+                                <img src="{{ asset('img/frontend/beta/homepage/6.png') }}" alt="" class="img-responsive">
                             </div>
                         </div>
                         <div class="description">
@@ -196,10 +210,23 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="img\6.png" class="img-responsive">
+                                <img src="{{ asset('img/frontend/beta/homepage/6.png') }}" class="img-responsive">
                             </div>
                             <div class="col-md-6">
-                                <img src="img\6.png" alt="" class="img-responsive">
+                                <img src="{{ asset('img/frontend/beta/homepage/6.png') }}" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="description">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="{{ asset('img/frontend/beta/homepage/6.png') }}" class="img-responsive">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ asset('img/frontend/beta/homepage/6.png') }}" alt="" class="img-responsive">
                             </div>
                         </div>
                         <div class="description">
@@ -216,11 +243,11 @@
                         <script>
                             function myMap() {
                                 var ITC = {lat: 11.5703858, lng: 104.8982137};
-                                var mapProp= {
-                                    center:new google.maps.LatLng(11.5703858, 104.8982137),
-                                    zoom:16,
+                                var mapProp = {
+                                    center: new google.maps.LatLng(11.5703858, 104.8982137),
+                                    zoom: 16,
                                 };
-                                var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
                                 var Marker = new google.maps.Marker({
                                     position: ITC,
@@ -233,21 +260,33 @@
                         <div class="border-bottom">
                             <span class="title">HISTORY</span>
                         </div>
-                        <p>The Royal University of Phnom Penh (RUPP) is Cambodia's oldest and one of the largest public universities.
-                            It hosts more than 12,000 scholarship and full-fee paying students, across a diverse range of undergraduate and postgraduate programs.
-                            It is unique in Cambodia for offering specialist degrees in fields including the sciences, humanities and social sciences,
-                            as well as professional degrees in fields such as information technology, electronics, psychology, social work, and tourism.
-                            RUPP also provides Cambodia's foremost degree-level language programs through the Institute of Foreign Languages.
-                            Due to its many achievements, RUPP has full membership of the ASEAN University Network (AUN).</p>
+                        <p>The Royal University of Phnom Penh (RUPP) is Cambodia's oldest and one of the largest public
+                            universities.
+                            It hosts more than 12,000 scholarship and full-fee paying students, across a diverse range
+                            of undergraduate and postgraduate programs.
+                            It is unique in Cambodia for offering specialist degrees in fields including the sciences,
+                            humanities and social sciences,
+                            as well as professional degrees in fields such as information technology, electronics,
+                            psychology, social work, and tourism.
+                            RUPP also provides Cambodia's foremost degree-level language programs through the Institute
+                            of Foreign Languages.
+                            Due to its many achievements, RUPP has full membership of the ASEAN University Network
+                            (AUN).</p>
 
-                        <p>RUPP has over 450 full-time staff. All of its 335 academic staff members hold tertiary qualifications, including 15 PhDs and 280 Masters degrees.
-                            are supported by over 120 administrative and maintenance staff. In addition, the university maintains links with Cambodian and international NGOs,
-                            local and international universities and government ministries. As a result, various international and non-government organizations and government
+                        <p>RUPP has over 450 full-time staff. All of its 335 academic staff members hold tertiary
+                            qualifications, including 15 PhDs and 280 Masters degrees.
+                            are supported by over 120 administrative and maintenance staff. In addition, the university
+                            maintains links with Cambodian and international NGOs,
+                            local and international universities and government ministries. As a result, various
+                            international and non-government organizations and government
                             offices regularly contribute adjunct faculty members to help expand RUPP's capacity.</p>
 
-                        <P>RUPP is located on three spacious campuses. The main campus lies roughly five kilometers from the center of Phnom Penh.
-                            Adjoining the main campus is the Institute of Foreign Languages, which boasts peaceful landscaping features alongside its modern architecture.
-                            Roughly one kilometer further from town lies RUPP Campus II, in which the departments of History, Sociology and Philosophy reside.</p>
+                        <P>RUPP is located on three spacious campuses. The main campus lies roughly five kilometers from
+                            the center of Phnom Penh.
+                            Adjoining the main campus is the Institute of Foreign Languages, which boasts peaceful
+                            landscaping features alongside its modern architecture.
+                            Roughly one kilometer further from town lies RUPP Campus II, in which the departments of
+                            History, Sociology and Philosophy reside.</p>
                     </div>
                     <div class="achievement" id="achievement">
                         <div class="border-bottom">
@@ -272,5 +311,17 @@
             </div>
         </div>
     </div>
+
+@endsection
+@section('after-scripts')
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmKjaBjdwr4NQ7rdppSaHSjyZJTgBrGWo&callback=myMap"></script>
-    @endsection
+    <script src="{{ asset('js/frontend/department/pixel-metro.js') }}"></script>
+    <script type="text/javascript">
+        $(".pixel-metro").pixel_metro({
+            height: "500px",
+            bg_metro: "images/dulieu/bg-metro3.jpg",
+            bg_opacity: 0.55,
+            metro_rows: 2,
+        });
+    </script>
+@endsection

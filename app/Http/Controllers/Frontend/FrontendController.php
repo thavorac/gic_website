@@ -46,7 +46,6 @@ class FrontendController extends Controller
     public function event_detail(){
 
     }
-
     public function Student_List_I3(){
         return view('frontend.beta.Student_List.Student_List_I3');
     }
@@ -55,49 +54,30 @@ class FrontendController extends Controller
         return view('frontend.beta.Student_List.Student_List_I4');
     }
     public function staff_detial_activite(){
-        return view('frontend.beta.staff_Detial.activite');
+        return view('frontend.beta.staff_detial.activite');
     }
     public function staff_detial_course(){
-        return view('frontend.beta.staff_Detial.course');
+        return view('frontend.beta.staff_detial.course');
     }
     public function staff_detial_introduct()
     {
-        return view('frontend.beta.staff_Detial.introduct');
+        return view('frontend.beta.staff_detial.introduct');
     }
     public function staff_detial_publications()
     {
-        return view('frontend.beta.staff_Detial.publications');
+        return view('frontend.beta.staff_detial.publications');
     }
     public function staff_detial_presentation()
     {
-        return view('frontend.beta.staff_Detial.presentation');
+        return view('frontend.beta.staff_detial.presentation');
     }
     public function staff_detial_project_to_research()
     {
-        return view('frontend.beta.staff_Detial.project_to_research');
+        return view('frontend.beta.staff_detial.project_to_research');
     }
     public function department()
     {
         return view('frontend.beta.department.department');
-    }
-
-    public function scholarship(){
-        return view('frontend.beta.scholarship.scholarship_link');
-    }
-    public function partnership(){
-        return view('frontend.beta.partnership.partner');
-    }
-    public function partner_link1(){
-        return view('frontend.beta.partnership.partner_link1');
-    }
-    public function partner_link2(){
-        return view('frontend.beta.partnership.partner_link2');
-    }
-    public function partner_link3(){
-        return view('frontend.beta.partnership.partner_link2');
-    }
-    public function partner_link4(){
-        return view('frontend.beta.partnership.partner_link4');
     }
 
 
