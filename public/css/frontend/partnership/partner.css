@@ -1,0 +1,39 @@
+
+.panel-default{
+    width:auto;
+}
+
+.component_sit{
+    font-family:Helvetica;
+    padding-left:0px;
+    line-height: 24px;
+    font-family: sans-serif;
+}
+.list{
+    padding-left: 0px;
+}
+.company_site_text{
+    border-bottom: 1px solid grey;
+    font-family: sans-serif;
+}
+
+.button{
+    width:100%;
+    background-color: #d9edf7;
+    border: inherit;
+    color: black;
+    line-height: 35px;
+    font-family: sans-serif;
+}
+.text{
+    font-size: 11px;
+    line-height: 19px;
+    font-weight: bold;
+    font-family :sans-serif;
+}
+.border_top{
+    text-align: justify;
+    font-size: smaller;
+    border-top: 1px solid lavender;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,47 @@
+
+
+.text_erasmus{
+    text-align: center;
+}
+
+.right_body{
+    border-left: 1px solid lightgrey ;
+    /*padding: 0 15px 0 15px;*/
+
+}
+
+.button-style{
+    font-size: x-large;
+    border-radius: 20px;
+    background-color: #0077c9;
+    color: white;
+}
+.panel_style{
+    border-radius: 15px 50px;
+    background:#DCDCDC;
+}
+
+.category{
+    border-bottom: 1px solid lightgrey;
+
+}
+
+.personal_detail {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    background: rgba(0, 119, 201, 0.4);
+}
+.image{
+    position: absolute;
+    width: 100%;
+}
+
+.scholarship{
+    font-weight: bold;
+    font-size: x-large;
+}
+.senior{
+    position: relative;
+}

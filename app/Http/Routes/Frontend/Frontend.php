@@ -22,10 +22,12 @@ Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage')
 Route::get('event/list', 'FrontendController@event_list')->name('frontend.event.list');
 Route::get('event/detail', 'FrontendController@event_detail')->name('frontend.event.detail');
 
-
-
-
-
+Route::get('scholarship', 'FrontendController@scholarship')->name('frontend.scholarship');
+Route::get('partnership', 'FrontendController@partnership')->name('frontend.partnership');
+Route::get('partner_link1', 'FrontendController@partner_link1')->name('frontend.partner_link1');
+Route::get('partner_link2', 'FrontendController@partner_link2')->name('frontend.partner_link2');
+Route::get('partner_link3', 'FrontendController@partner_link3')->name('frontend.partner_link3');
+Route::get('partner_link4', 'FrontendController@partner_link4')->name('frontend.partner_link4');
 
 
 
