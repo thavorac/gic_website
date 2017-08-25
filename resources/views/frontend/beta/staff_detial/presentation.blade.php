@@ -1,6 +1,6 @@
 @extends('frontend.layouts.beta')
 @section('after-styles')
-    <link rel="stylesheet" type="text/css" href="css/frontend/Staff_Detial/staffdetial.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/Staff_Detial/staffdetial.css') }}">
 @endsection
 @section('content')
     <div class="row">
@@ -20,7 +20,7 @@
                 <div class="border-bottom">
                     <div class="row">
                         <div class="col-md-5 border-right">
-                            <img src="img/frontend/beta/homepage/1.png" class="img-responsive"/>
+                            <img src="{{ asset('img/frontend/beta/homepage/1.png') }}" class="img-responsive"/>
                         </div>
                         <div class="col-md-7">
                             <div class="border-bottom">
@@ -65,88 +65,88 @@
                             <div class="item active">
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/1.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/1.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/1.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/1.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/1.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/1.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/1.png" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-3">
-                                    <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/2.png" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/2.png" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/2.png" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/2.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/1.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/2.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/2.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/2.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/2.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="thumbnail">
-                                        <a href="#"><img src="img/frontend/beta/homepage/4.png" class="img-responsive"></a>
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="{{ asset('img/frontend/beta/homepage/4.png') }}" class="img-responsive"></a>
                                     </div>
                                 </div>
                             </div>
@@ -166,41 +166,41 @@
                 <div class="col-md-12">
                     <div class="direct border" style="border-top: 4px solid #192f46">
                         <div class="border-bottom">
-                            <a href="staff_detial-introduct">
+                            <a href="{{ asset('staff_detial-introduct') }}">
                                 <span>Introduct</span>
-                                <img class="float-right" src="img/frontend/beta/homepage/brand-arrow-right.png" />
+                                <img class="float-right" src="{{ asset('img/frontend/beta/homepage/brand-arrow-right.png') }}" />
                             </a>
                         </div>
                         <div class="border-bottom">
                             <u>
-                                <a href="staff_detial-presentation">
+                                <a href="{{ asset('staff_detial-presentation') }}">
                                     <span style="color:#205192 ">Presentation</span>
-                                    <img class="float-right" src="img/frontend/beta/homepage/brand-arrow-right.png" />
+                                    <img class="float-right" src="{{ asset('img/frontend/beta/homepage/brand-arrow-right.png') }}" />
                                 </a>
                             </u>
                         </div>
                         <div class="border-bottom">
-                            <a href="staff_detial-project_to_research">
+                            <a href="{{ asset('staff_detial-project_to_research') }}">
                                 <span>Project to Research</span>
-                                <img class="float-right" src="img/frontend/beta/homepage/brand-arrow-right.png" />
+                                <img class="float-right" src="{{ asset('img/frontend/beta/homepage/brand-arrow-right.png') }}" />
                             </a>
                         </div>
                         <div class="border-bottom">
-                            <a href="staff_detial-publications">
+                            <a href="{{ asset('staff_detial-publications') }}">
                                 <span>Publications</span>
-                                <img class="float-right" src="img/frontend/beta/homepage/brand-arrow-right.png" />
+                                <img class="float-right" src="{{ asset('img/frontend/beta/homepage/brand-arrow-right.png') }}" />
                             </a>
                         </div>
                         <div class="border-bottom">
-                            <a href="staff_detial-activite">
+                            <a href="{{ asset('staff_detial-activite') }}">
                                 <span>Activite</span>
-                                <img class="float-right" src="img/frontend/beta/homepage/brand-arrow-right.png" />
+                                <img class="float-right" src="{{ asset('img/frontend/beta/homepage/brand-arrow-right.png') }}" />
                             </a>
                         </div>
                         <div style="padding: 5px 5px 0px 5px">
-                            <a href="staff_detial-course">
+                            <a href="{{ asset('staff_detial-course') }}">
                                 <span>Course</span>
-                                <img class="float-right" src="img/frontend/beta/homepage/brand-arrow-right.png" />
+                                <img class="float-right" src="{{ asset('img/frontend/beta/homepage/brand-arrow-right.png') }}" />
                             </a>
                         </div>
                     </div>
@@ -240,5 +240,7 @@
             </div>
         </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmKjaBjdwr4NQ7rdppSaHSjyZJTgBrGWo&callback=myMap"></script>
     @endsection
+@section('after-scripts')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmKjaBjdwr4NQ7rdppSaHSjyZJTgBrGWo&callback=myMap"></script>
+@endsection

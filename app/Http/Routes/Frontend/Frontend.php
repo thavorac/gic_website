@@ -5,16 +5,9 @@ Route::get('/', 'FrontendController@index')->name('frontend.index');
 
 Route::get('List/I3', 'FrontendController@Student_List_I3')->name('frontend.Student_List_I3');
 Route::get('List/I4', 'FrontendController@Student_List_I4')->name('frontend.Student_List_I4');
-
-
 Route::get('mission-main', 'FrontendController@mission_main')->name('frontend.mission.main');
 Route::get('mission-detail', 'FrontendController@mission_detail')->name('frontend.mission.detail');
-
-
 Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
-
-
-
 Route::get('event/list', 'FrontendController@event_list')->name('frontend.event.list');
 Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
 Route::get('event/detail', 'FrontendController@event_detail')->name('frontend.event.detail');
@@ -25,7 +18,6 @@ Route::get('staff_detial-publications', 'FrontendController@staff_detial_publica
 Route::get('staff_detial-activite', 'FrontendController@staff_detial_activite')->name('frontend.staff_detial-activite');
 Route::get('staff_detial-course', 'FrontendController@staff_detial_course')->name('frontend.staff_detial-course');
 Route::get('department', 'FrontendController@department')->name('frontend.department');
-
 Route::get('macros', 'FrontendController@macros')->name('frontend.macros');
 
 /**
