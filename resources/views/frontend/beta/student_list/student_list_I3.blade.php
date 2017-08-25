@@ -1,10 +1,9 @@
 @extends('frontend.layouts.beta')
 @section('after-styles')
-    <link rel="stylesheet" type="text/css" href="{{asset('css/frontend/homepage/home-page-body.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/student_list/student_list.css') }}">
 @endsection
 @section('content')
     <div class="row">
-        <h1>Update by sophea</h1>
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="col-md-3 col-sm-12 col-xs-12" >
                 <div>
@@ -16,11 +15,11 @@
                     <a class="list-group-item list-group-item-info" href="#"><h4>Football</h4></a>
                     <hr><h3 style="text-align: center">Class </h3><hr>
                     <div class="class">
-                        <a class="list-group-item active" href="Student_List_I3.html"><span>I3</span></a>
-                        <a class="list-group-item list-group-item-info" href="Student_List_I4.html"><span>I4</span></a>
-                        <a class="list-group-item list-group-item-info" href="Student_List_I5.html"><span>I5</span></a>
-                        <a class="list-group-item list-group-item-info" href="Student_List_M1.html"><span>M1</span></a>
-                        <a class="list-group-item list-group-item-info" href="Student_List_M2.html"><span>M2</span></a>
+                        <a class="list-group-item active" href="{{ asset('list-I3') }}"><span>I3</span></a>
+                        <a class="list-group-item list-group-item-info" href="{{ asset('list-I4') }}"><span>I4</span></a>
+                        <a class="list-group-item list-group-item-info" href="{{ asset('list-I5') }}"><span>I5</span></a>
+                        <a class="list-group-item list-group-item-info" href="{{ asset('list-M1') }}"><span>M1</span></a>
+                        <a class="list-group-item list-group-item-info" href="{{ asset('list-M2') }}"><span>M2</span></a>
                     </div>
                     <hr>
                 </div>

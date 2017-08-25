@@ -46,12 +46,21 @@ class FrontendController extends Controller
     public function event_detail(){
 
     }
-    public function Student_List_I3(){
-        return view('frontend.beta.Student_List.Student_List_I3');
+    public function student_list_I3(){
+        return view('frontend.beta.student_list.student_list_I3');
     }
 
-    public function Student_List_I4(){
-        return view('frontend.beta.Student_List.Student_List_I4');
+    public function student_list_I4(){
+        return view('frontend.beta.student_list.student_list_I4');
+    }
+    public function student_list_I5(){
+        return view('frontend.beta.student_list.student_list_I5');
+    }
+    public function student_list_M1(){
+        return view('frontend.beta.student_list.student_list_M1');
+    }
+    public function student_list_M2(){
+        return view('frontend.beta.student_list.student_list_M2');
     }
     public function staff_detial_activite(){
         return view('frontend.beta.staff_detial.activite');

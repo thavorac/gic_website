@@ -3,8 +3,11 @@
 Route::get('/', 'FrontendController@index')->name('frontend.index');
 
 
-Route::get('List/I3', 'FrontendController@Student_List_I3')->name('frontend.Student_List_I3');
-Route::get('List/I4', 'FrontendController@Student_List_I4')->name('frontend.Student_List_I4');
+Route::get('list-I3', 'FrontendController@student_list_I3')->name('frontend.student_list_I3');
+Route::get('list-I4', 'FrontendController@student_list_I4')->name('frontend.student_list_I4');
+Route::get('list-I5', 'FrontendController@student_list_I5')->name('frontend.student_list_I5');
+Route::get('list-M1', 'FrontendController@student_list_M1')->name('frontend.student_list_M1');
+Route::get('list-M2', 'FrontendController@student_list_M2')->name('frontend.student_list_M2');
 Route::get('mission-main', 'FrontendController@mission_main')->name('frontend.mission.main');
 Route::get('mission-detail', 'FrontendController@mission_detail')->name('frontend.mission.detail');
 Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
@@ -19,6 +22,7 @@ Route::get('staff_detial-activite', 'FrontendController@staff_detial_activite')-
 Route::get('staff_detial-course', 'FrontendController@staff_detial_course')->name('frontend.staff_detial-course');
 Route::get('department', 'FrontendController@department')->name('frontend.department');
 Route::get('macros', 'FrontendController@macros')->name('frontend.macros');
+
 
 /**
  * These frontend controllers require the user to be logged in
