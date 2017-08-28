@@ -52,61 +52,61 @@
                     <div class="pixel-metro">
                         <div class="content-metro" size-o="normal">
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img01.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img01.jpg')}}">
                             </div>
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img02.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img02.jpg')}}">
                             </div>
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img03.jpg">
-                            </div>
-                        </div>
-                        <div class="content-metro" size-o="wide">
-                            <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img04.jpg">
-                            </div>
-                            <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img05.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img03.jpg')}}">
                             </div>
                         </div>
                         <div class="content-metro" size-o="wide">
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img34.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img04.jpg')}}">
                             </div>
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img35.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img05.jpg')}}">
+                            </div>
+                        </div>
+                        <div class="content-metro" size-o="wide">
+                            <div class="metro-sheet">
+                                <img src="{{ asset('img/frontend/beta/homepage/img34.jpg')}}">
+                            </div>
+                            <div class="metro-sheet">
+                                <img src="{{ asset('img/frontend/beta/homepage/img35.jpg')}}">
                             </div>
                         </div>
                         <div class="content-metro" size-o="small">
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img36.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img36.jpg')}}">
                             </div>
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img37.jpg">
-                            </div>
-                        </div>
-                        <div class="content-metro" size-o="small">
-                            <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img38.jpg">
-                            </div>
-                            <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img39.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img37.jpg')}}">
                             </div>
                         </div>
                         <div class="content-metro" size-o="small">
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img40.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img38.jpg')}}">
                             </div>
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img41.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img39.jpg')}}">
                             </div>
                         </div>
                         <div class="content-metro" size-o="small">
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img42.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img40.jpg')}}">
                             </div>
                             <div class="metro-sheet">
-                                <img src="img/frontend/beta/homepage/img43.jpg">
+                                <img src="{{ asset('img/frontend/beta/homepage/img41.jpg')}}">
+                            </div>
+                        </div>
+                        <div class="content-metro" size-o="small">
+                            <div class="metro-sheet">
+                                <img src="{{ asset('img/frontend/beta/homepage/img42.jpg')}}">
+                            </div>
+                            <div class="metro-sheet">
+                                <img src="{{ asset('img/frontend/beta/homepage/img43.jpg')}}">
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                             <hr>
                         </div>
                         <div>
-                            <img src="img/frontend/beta/homepage/administration.png" alt="">
+                            <img src="{{ asset('img/frontend/beta/homepage/administration.png') }}" alt="">
                             <hr>
                         </div>
                     </div>
