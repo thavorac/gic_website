@@ -18,6 +18,9 @@
                         <div style="list-style-type: none">
                             <div class="collapse navbar-collapse" id="myNavbar">
                                 <div>
+
+                                    {{--LIST DEPARTMENT--}}
+
                                     <span class="title">Department GIC</span>
                                     <hr>
                                     <a href="#vision"><span class="title-sidebar">Vision</span></a>
@@ -45,6 +48,9 @@
         <div class="col-md-9">
             <div class="row border-left">
                 <div class="col-md-12">
+
+                    {{--DESCRIPTION--}}
+
                     <span class="title">DESCRIPTION</span>
                     <hr>
                 </div>
@@ -121,6 +127,9 @@
                         amet, consectetur adipisicing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris </p>
+
+                    {{--VISION--}}
+
                     <div class="vision" id="vision">
                         <div class="border-bottom">
                             <span class="title">VISION</span>
@@ -131,13 +140,16 @@
                             adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
                             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
                     </div>
-                    <div class="goal" id="goal">
+
+                    {{--Goal--}}
+
+                    <div id="goal">
                         <div class="border-bottom">
                             <span class="title">GOALS</span>
                         </div>
                         <p>In order to succeed in transforming the current RUPP into the flagship university of
                             Cambodia, the Mission points are as follows:</p>
-                        <ul>
+                        <div class="goal">
                             <li>Enhance teaching staff and middle-level administrative staff to hold at least master’s
                                 degrees with both English and ICT competence.
                             </li>
@@ -159,15 +171,18 @@
                             <li>Mainstream quality assurance and evaluation mechanisms in all departments and
                                 programs.
                             </li>
-                        </ul>
+                        </div>
                     </div>
-                    <div class="mission" id="mission">
+
+                    {{--MISSION STATEMENT--}}
+
+                    <div id="mission">
                         <div class="border-bottom">
                             <span class="title">MISSION STATEMENT</span>
                         </div>
                         <p>In order to succeed in transforming the current RUPP into the flagship university of
                             Cambodia, the Mission points are as follows:</p>
-                        <ul>
+                        <div class="mission">
                             <li>Promote integrity and a sense of belonging and ownership among students, faculty and
                                 staff.
                             </li>
@@ -179,8 +194,11 @@
                             <li>Mainstream quality assurance and evaluation mechanisms in all departments and
                                 programs.
                             </li>
-                        </ul>
+                        </div>
                     </div>
+
+                    {{--ADMINISTRATION--}}
+
                     <div class="administration" id="administration">
                         <div>
                             <span class="title">ADMINISTRATION</span>
@@ -191,6 +209,9 @@
                             <hr>
                         </div>
                     </div>
+
+                    {{--VISIT GIC--}}
+
                     <div class="visit-gic" id="visit-gic">
                         <div class="border-bottom">
                             <span class="title">VISIT GIC</span>
@@ -235,6 +256,9 @@
                                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</span>
                         </div>
                     </div>
+
+                    {{--LOCATION--}}
+
                     <div class="location" id="location">
                         <div class="border-bottom">
                             <span class="title">Location</span>
@@ -256,6 +280,9 @@
                             }
                         </script>
                     </div>
+
+                    {{--HISTORY--}}
+
                     <div class="history" id="history">
                         <div class="border-bottom">
                             <span class="title">HISTORY</span>
@@ -288,12 +315,15 @@
                             Roughly one kilometer further from town lies RUPP Campus II, in which the departments of
                             History, Sociology and Philosophy reside.</p>
                     </div>
-                    <div class="achievement" id="achievement">
+
+                    {{--ACHIEVEMENT--}}
+
+                    <div id="achievement">
                         <div class="border-bottom">
                             <span class="title">ACHIEVEMENT</span>
                         </div>
                         <div>
-                            <ul>
+                            <div class="achievement">
                                 <li>MAT 110 Digital Imaging 1 : Photoshop (3 units)</li>
                                 <li>MAT 120 Media Design 1 : Production (3 units)</li>
                                 <li>MAT 125 Web Design 1 : Fundamentals (3 units)</li>
@@ -304,7 +334,7 @@
                                 <li>MAT 120 Media Design 1 : Production (3 units)</li>
                                 <li>MAT 125 Web Design 1 : Fundamentals (3 units)</li>
                                 <li>MAT 135 Graphic Design 1 : Principles (3 units)</li>
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
