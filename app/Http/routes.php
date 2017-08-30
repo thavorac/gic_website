@@ -62,3 +62,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'middleware' => 'ad
     require (__DIR__ . '/Routes/Backend/Timetable.php');
     require (__DIR__ . '/Routes/Backend/UsefulLink.php');
 });
+
+Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
+
+    Route::group(['prefix' => 'student'], function () {
+        require(__DIR__ . '/Routes/Backend/API/Student.php');
+    });
+    Route::group(['prefix' => 'department'], function () {
+        require(__DIR__ . '/Routes/Backend/API/Department.php');
+    });
+});

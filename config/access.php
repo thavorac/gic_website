@@ -100,4 +100,40 @@ return [
          */
         'login_tries' => env('LOGIN_CAPTCHA_TRIES', 3),
      ],
+    'schools' => [
+        'itc' => 2,
+    ],
+    'departments' =>[
+        'department_gca'=> 1,
+        'department_gci'=> 2,
+        'department_gee'=> 3,
+        'department_gic'=> 4,
+        'department_gim'=> 5,
+        'department_gru'=> 6,
+        'department_ggg'=> 7,
+        'department_tc'=> 8,
+        'department_finance' => 9,
+        'department_study_affair'=>10,
+        'department_academic'=>11,
+        'sa'=> 12,
+        'sf'=> 13
+    ],
+    'genders' => [
+        'gender_male'=> 1,
+        'gender_female'=> 2,
+    ],
+    'degrees' => [
+        'degree_engineer'=> 1,
+        'degree_associate'=> 2,
+        'degree_bachelor'=> 3,
+        'degree_master'=>4,
+        'degree_doctor'=> 5,
+    ],
+    'grades' => [
+        'grade_1'=> 1,
+        'grade_2'=> 2,
+        'grade_3'=> 3,
+        'grade_4'=> 4,
+        'grade_5'=> 5,
+    ],
 ];
