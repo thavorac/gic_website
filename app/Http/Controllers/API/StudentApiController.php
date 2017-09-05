@@ -10,6 +10,7 @@ use App\Models\Department;
 use App\Models\Student;
 use App\Repositories\Backend\Student\StudentRepositoryContract;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -29,6 +30,16 @@ class StudentApiController extends Controller
     public function get()
     {
         $students = Student::get();
+        return $students;
+    }
+    public function search(Request $request){
+        $keyword = $request->get('keyword');
+        if(!$keyword){
+            $keyword = "";
+        }
+        $students = Student::where('name_kh', 'ILIKE', '%'.$keyword.'%')
+                            ->orWhere('name_latin','ILIKE','%'.$keyword.'%')
+                            ->get();
         return $students;
     }
 }
