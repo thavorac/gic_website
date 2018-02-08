@@ -1,0 +1,102 @@
+.pixel-metro {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: auto;
+}
+.pixel-metro .content-metro {
+	display: none;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	z-index: 2;
+	/*3d option */
+	perspective: 600px;
+}
+.pixel-metro .content-metro a:hover{
+	text-decoration: none;
+}
+.pixel-metro .content-metro:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 0;
+	z-index: 9999;
+	transition: border-color 0.5s;
+	box-sizing: border-box;
+	border-top-width: 0px;
+	border-bottom-width: 2px;
+	border-style: solid;
+	border-color: rgba(200,200,200,0);
+
+}
+.pixel-metro .content-metro:hover:before {
+	border-color: rgba(200,200,200,0.85);
+}
+.pixel-metro .content-metro .metro-sheet{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: none;
+	/*3d option*/
+	transform-style: preserve-3d;
+  	transition: transform 1s;
+	
+}
+.pixel-metro .content-metro .metro-sheet:first-child {
+	display: block;
+}
+.pixel-metro .content-metro .metro-sheet .icon-metro{
+	font-size: 4.3em;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top:50%;
+	left: 50%;
+}
+.pixel-metro .content-metro .metro-sheet .text-metro{
+	padding:5px;
+}
+.pixel-metro .content-metro .metro-sheet a{
+	color:#fff;
+}
+.pixel-metro .content-metro .metro-sheet img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/*3d option*/
+	backface-visibility: hidden;
+}
+.pixel-metro .content-metro .content-title {
+	padding: 8px;
+	background-color: rgba(0,0,0,0.65);
+	color:#eee;
+	position: absolute;
+	bottom: 0;
+}
+.pixel-metro .page-metro {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding:8px;
+}
+.pixel-metro .page-metro span{
+	width: 8px;
+	height: 8px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.35);
+	margin: 0 2px;
+	cursor: pointer;
+}
+.pixel-metro .caption-smart {
+	color:#fff;
+	text-shadow: 2px 2px 3px #333;
+	position: absolute;
+	display: none;
+	opacity:0;
+}

@@ -1,0 +1,84 @@
+.panel{
+}
+.border{
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+}
+.information{
+    padding: 10px;
+}
+.font-name{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+}
+h4{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: #337ab7;
+    line-height: 23px;
+}
+span{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.border-left{
+    border-left: 1px solid #e2e2e2 ;
+    height: auto;
+}
+.color{
+    color: #205192;
+}
+@media only screen and (max-device-width : 990px) {
+    .border-left{
+        border-left: none !important;
+        height: auto;
+    }
+}
+
+@media only screen and (min-device-width : 990px) {
+    .border-left{
+        border-left: 1px solid #e2e2e2 ;
+        height: auto;
+    }
+}
+img{
+    width: 100%;
+}
+.italic{
+    color: #808080;
+    font-family: 'Lato', sans-serif ;
+    font-style: italic;
+}
+.Sex-ID{
+    font-family: 'Lato', sans-serif ;
+    font-style: italic;
+    font-weight: bold;
+    color: #808080;
+}
+p{
+    padding-top: 10px;
+    font-family: 'Lato', sans-serif ;
+
+}
+.name{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    font-style: italic;
+}
+button{
+    float: right;
+}
+li{
+    list-style-type:none !important;
+}
+.class{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #337ab7;
+}
+.height{
+    height: 45px;
+    margin-bottom: 15px;
+}

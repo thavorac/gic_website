@@ -40,7 +40,7 @@
             background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
         }
         .block-update-card .update-card-MDimentions {
-            width: 80px;
+            width: 160px;
         }
         .block-update-card .update-card-body {
             margin-top: 10px;

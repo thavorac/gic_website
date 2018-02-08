@@ -1,11 +1,28 @@
 <?php
 
-/**
- * Frontend Controllers
- */
-
 Route::get('/', 'FrontendController@index')->name('frontend.index');
+
+
+Route::get('list-I3', 'FrontendController@student_list_I3')->name('frontend.student_list_I3');
+Route::get('list-I4', 'FrontendController@student_list_I4')->name('frontend.student_list_I4');
+Route::get('list-I5', 'FrontendController@student_list_I5')->name('frontend.student_list_I5');
+Route::get('list-M1', 'FrontendController@student_list_M1')->name('frontend.student_list_M1');
+Route::get('list-M2', 'FrontendController@student_list_M2')->name('frontend.student_list_M2');
+Route::get('mission-main', 'FrontendController@mission_main')->name('frontend.mission.main');
+Route::get('mission-detail', 'FrontendController@mission_detail')->name('frontend.mission.detail');
+Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
+Route::get('event/list', 'FrontendController@event_list')->name('frontend.event.list');
+Route::get('homepage', 'FrontendController@homepage')->name('frontend.homepage');
+Route::get('event/detail', 'FrontendController@event_detail')->name('frontend.event.detail');
+Route::get('staff_detial-introduct', 'FrontendController@staff_detial_introduct')->name('frontend.staff_detial-introduct');
+Route::get('staff_detial-presentation', 'FrontendController@staff_detial_presentation')->name('frontend.staff_detial-presentation');
+Route::get('staff_detial-project_to_research', 'FrontendController@staff_detial_project_to_research')->name('frontend.staff_detial-project_to_research');
+Route::get('staff_detial-publications', 'FrontendController@staff_detial_publications')->name('frontend.staff_detial-publications');
+Route::get('staff_detial-activite', 'FrontendController@staff_detial_activite')->name('frontend.staff_detial-activite');
+Route::get('staff_detial-course', 'FrontendController@staff_detial_course')->name('frontend.staff_detial-course');
+Route::get('department', 'FrontendController@department')->name('frontend.department');
 Route::get('macros', 'FrontendController@macros')->name('frontend.macros');
+
 
 /**
  * These frontend controllers require the user to be logged in

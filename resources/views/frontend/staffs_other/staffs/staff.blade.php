@@ -11,12 +11,12 @@
             width: 100%;
         }
         .twPc-bg {
-            background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+            background-image: url("https://pbs.twimg.com/profile_banners/6253282/1431474710/web");
             background-position: 0 50%;
             background-size: 100% auto;
             border-bottom: 1px solid #e1e8ed;
             border-radius: 4px 4px 0 0;
-            height: 95px;
+            height: 200px;
             width: 100%;
         }
         .twPc-block {
@@ -47,13 +47,16 @@
         .twPc-divUser {
             margin: 20px 0 0;
         }
-        .twPc-divName {
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 21px;
+        .twPc-divName p{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            padding-top: 10px;
         }
         .twPc-divName a {
-            color: inherit !important;
+            font-size: 26px;
+            line-height: 30px;
+            color: #0060b1;;
         }
         .twPc-divStats {
             margin-left: 0;
@@ -119,36 +122,16 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="twPc-divName">
-                                        <a href="https://twitter.com/mertskaplan">{{$employee->name_kh}}</a>
-                                    </div>
-                                <span>
-                                    <a href="https://twitter.com/mertskaplan"><span>{{$employee->name_en}}</span></a>
-                                </span>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="twPc-divStats">
-                                        <ul class="twPc-Arrange">
-                                            <li class="twPc-ArrangeSizeFit">
-                                                <a href="https://twitter.com/mertskaplan" title="9.840 Tweet">
-                                                    <span class="twPc-StatLabel twPc-block">Tweets</span>
-                                                    <span class="twPc-StatValue">9.840</span>
-                                                </a>
-                                            </li>
-                                            <li class="twPc-ArrangeSizeFit">
-                                                <a href="https://twitter.com/mertskaplan/following" title="885 Following">
-                                                    <span class="twPc-StatLabel twPc-block">Following</span>
-                                                    <span class="twPc-StatValue">885</span>
-                                                </a>
-                                            </li>
-                                            <li class="twPc-ArrangeSizeFit">
-                                                <a href="https://twitter.com/mertskaplan/followers" title="1.810 Followers">
-                                                    <span class="twPc-StatLabel twPc-block">Followers</span>
-                                                    <span class="twPc-StatValue">1.810</span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <a href="#">{{$employee->name_kh}}</a> <br/>
+                                        <span>{{$employee->name_latin}} <br/></span>
+
+                                        <p>
+                                            <i class="fa fa-phone-square"></i> {{$employee->phone}} <br/>
+                                            <i class="fa fa-envelope-square"></i> {{$employee->email}}
+                                        </p>
                                     </div>
                                 </div>
+
                             </div>
 
 

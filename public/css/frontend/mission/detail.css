@@ -1,0 +1,83 @@
+.missionlist_centre{
+    font-size: 43px;
+    padding-left: 13px;
+    text-align: center;
+    color: white;
+
+}
+
+.borderred {
+    border-color:red;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.titlesize{
+    font-family: Arial;
+    font-size: 23px;
+    color: #060680;
+
+}
+.margin1{
+    margin-left:6px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    background: #F7F7F7;
+}
+.margintop{
+    padding-top: 20px;
+}
+
+.margin2{
+    margin-left:42px;
+
+}
+
+.fontpara{
+    font-size: 15px;
+    font-family: Arial;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.floatfont{
+    float: right;
+    font-style: italic;
+    font-style: oblique;
+    margin-bottom: 63px;
+}
+
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D4D4D4;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: grey}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
